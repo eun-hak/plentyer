@@ -26,17 +26,17 @@ export default function Home() {
             {/* Hero Section */}
             <section className="py-16 md:py-24 text-center space-y-6 max-w-2xl mx-auto px-4">
                 <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900">
-                    풍요로운 <span className="text-indigo-600">지식</span>과<br />
-                    <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">계층화된 성장</span>
+                    게임의 모든 <span className="text-indigo-600">정보</span>를<br />
+                    <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">한 곳에서</span>
                 </h1>
                 <p className="text-lg md:text-xl text-gray-500 leading-relaxed">
-                    Plentyer는 기술, 금융, 라이프스타일, 여행 등 다양한 분야의<br />
-                    깊이 있는 콘텐츠를 단계별로 제공합니다.
+                    PC, 콘솔, 모바일 게임 리뷰부터 e스포츠 분석까지<br />
+                    게이머를 위한 최고의 콘텐츠를 제공합니다.
                 </p>
                 <div className="flex justify-center gap-4 pt-4">
-                    <Link href="/category/tech">
+                    <Link href="/category/pc">
                         <Button size="lg" className="rounded-full px-8 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700">
-                            탐험 시작하기
+                            게임 탐험하기
                         </Button>
                     </Link>
                     <Button size="lg" variant="outline" className="rounded-full px-8 border-indigo-600 text-indigo-600 hover:bg-indigo-50">

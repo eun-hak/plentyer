@@ -8,11 +8,11 @@ import { SuppressHydrationWarning } from './components/SuppressHydrationWarning'
 
 export const metadata = {
     title: {
-        default: 'Plentyer - 풍요로운 지식과 경험을 나누는 공간',
+        default: 'Plentyer - 게임의 모든 정보',
         template: '%s | Plentyer',
     },
-    description: 'Plentyer는 기술, 금융, 라이프스타일, 여행 등 다양한 주제의 깊이 있는 콘텐츠를 제공합니다. 풍부한(Plenty) 지식을 계층(Tier)별로 구조화하여 당신의 성장을 돕습니다.',
-    keywords: ['플렌티어', 'Plentyer', '블로그', '기술', '금융', '라이프스타일', '여행', '지식 공유', '성장', '인사이트'],
+    description: 'Plentyer는 PC, 콘솔, 모바일 게임 리뷰와 공략, e스포츠 분석 등 게이머를 위한 최고의 콘텐츠를 제공합니다.',
+    keywords: ['플렌티어', 'Plentyer', '게임', 'PC게임', '콘솔게임', '모바일게임', 'e스포츠', '게임리뷰', '게임공략', '게임추천'],
     authors: [{ name: 'Plentyer' }],
     creator: 'Plentyer',
     publisher: 'Plentyer',
@@ -30,8 +30,8 @@ export const metadata = {
         locale: 'ko_KR',
         url: '/',
         siteName: 'Plentyer',
-        title: 'Plentyer - 풍요로운 지식과 경험을 나누는 공간',
-        description: '기술, 금융, 라이프스타일, 여행 등 다양한 주제의 깊이 있는 콘텐츠를 제공합니다.',
+        title: 'Plentyer - 게임의 모든 정보',
+        description: 'PC, 콘솔, 모바일 게임 리뷰와 공략, e스포츠 분석 등 게이머를 위한 최고의 콘텐츠를 제공합니다.',
         images: [
             {
                 url: '/og-image.png',
@@ -44,7 +44,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Plentyer',
-        description: '풍요로운 지식과 경험을 나누는 공간',
+        description: '게임의 모든 정보',
         images: ['/og-image.png'],
     },
     robots: {
@@ -67,82 +67,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="ko" suppressHydrationWarning>
-            <head suppressHydrationWarning>
-                {/* suppressHydrationWarning은 브라우저 확장 프로그램이 추가하는 요소들로 인한 경고를 억제합니다 */}
-            </head>
             <body className="font-sans antialiased text-gray-900 bg-white" suppressHydrationWarning>
-                <script
-                    dangerouslySetInnerHTML={{
-                        __html: `
-                            (function() {
-                                try {
-                                    if (document.readyState === 'loading') {
-                                        document.addEventListener('DOMContentLoaded', function() {
-                                            setTimeout(function() {
-                                                fetch('http://127.0.0.1:7243/ingest/75d80d41-7e6c-45b6-9215-177aa7e729ff', {
-                                                    method: 'POST',
-                                                    headers: { 'Content-Type': 'application/json' },
-                                                    body: JSON.stringify({
-                                                        location: 'layout.tsx:inline-script',
-                                                        message: 'DOMContentLoaded - initial DOM check',
-                                                        data: {
-                                                            hasHead: !!document.head,
-                                                            headChildren: Array.from(document.head.children || []).map(function(el) {
-                                                                return {
-                                                                    tag: el.tagName,
-                                                                    id: el.id,
-                                                                    classes: el.className,
-                                                                    hasWxt: el.hasAttribute('data-wxt-integrated'),
-                                                                    isEndic: el.id === '__endic_crx__'
-                                                                };
-                                                            }),
-                                                            bodyChildren: Array.from(document.body.children || []).slice(0, 5).map(function(el) {
-                                                                return { tag: el.tagName, id: el.id };
-                                                            })
-                                                        },
-                                                        timestamp: Date.now(),
-                                                        sessionId: 'debug-session',
-                                                        runId: 'run1',
-                                                        hypothesisId: 'E'
-                                                    })
-                                                }).catch(function() {});
-                                            }, 100);
-                                        });
-                                    } else {
-                                        setTimeout(function() {
-                                            fetch('http://127.0.0.1:7243/ingest/75d80d41-7e6c-45b6-9215-177aa7e729ff', {
-                                                method: 'POST',
-                                                headers: { 'Content-Type': 'application/json' },
-                                                body: JSON.stringify({
-                                                    location: 'layout.tsx:inline-script',
-                                                    message: 'DOM already loaded - initial DOM check',
-                                                    data: {
-                                                        hasHead: !!document.head,
-                                                        headChildren: Array.from(document.head.children || []).map(function(el) {
-                                                            return {
-                                                                tag: el.tagName,
-                                                                id: el.id,
-                                                                hasWxt: el.hasAttribute('data-wxt-integrated'),
-                                                                isEndic: el.id === '__endic_crx__'
-                                                            };
-                                                        })
-                                                    },
-                                                    timestamp: Date.now(),
-                                                    sessionId: 'debug-session',
-                                                    runId: 'run1',
-                                                    hypothesisId: 'E'
-                                                })
-                                            }).catch(function() {});
-                                        }, 100);
-                                    }
-                                } catch(e) {}
-                            })();
-                        `,
-                    }}
-                />
                 <SuppressHydrationWarning />
                 <Header />
-                <main>{children}</main>
+                <main suppressHydrationWarning>{children}</main>
                 <Footer />
             </body>
         </html>

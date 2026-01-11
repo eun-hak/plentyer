@@ -27,7 +27,7 @@ export function Header() {
       <div className="container mx-auto px-4 h-16 flex items-center justify-between max-w-5xl">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <div className="bg-gradient-to-br from-indigo-600 to-purple-600 text-white px-2 py-1 rounded-lg font-bold text-lg">P</div>
+          <div className="bg-gradient-to-br from-indigo-600 to-purple-600 text-white w-8 h-8 rounded-lg font-bold text-lg flex items-center justify-center aspect-square">P</div>
           <span className="text-xl font-bold tracking-tight text-gray-900 hidden sm:block">Plentyer</span>
         </Link>
 
