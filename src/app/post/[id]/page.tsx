@@ -68,9 +68,47 @@ export default async function PostDetailPage({ params }: PageProps) {
 
     const category = CATEGORIES.find(c => c.slug === post.category);
     const relatedPosts = POSTS.filter(p => p.id !== post.id && p.category === post.category);
+    
+    // JSON-LD 구조화 데이터
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: post.title,
+        description: post.summary,
+        image: post.coverImage || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://plentyer.com'}/og-image.png`,
+        datePublished: post.date,
+        dateModified: post.date,
+        author: {
+            '@type': 'Organization',
+            name: 'Plentyer',
+            url: process.env.NEXT_PUBLIC_SITE_URL || 'https://plentyer.com',
+        },
+        publisher: {
+            '@type': 'Organization',
+            name: 'Plentyer',
+            logo: {
+                '@type': 'ImageObject',
+                url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://plentyer.com'}/og-image.png`,
+            },
+        },
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://plentyer.com'}/post/${post.id}`,
+        },
+        keywords: post.tags?.join(', ') || category?.name || '',
+        articleSection: category?.name || post.category,
+        wordCount: post.content.length,
+    };
 
     return (
-        <article className="pb-20">
+        <>
+            {/* JSON-LD 구조화 데이터 */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            
+            <article className="pb-20">
             {/* Breadcrumb */}
             <div className="bg-gray-50 border-b border-gray-100">
                 <div className="container mx-auto px-4 max-w-5xl py-4">
@@ -91,7 +129,7 @@ export default async function PostDetailPage({ params }: PageProps) {
                 <div className="flex-1 max-w-[740px] mx-auto w-full">
 
                     <header className="mb-8 text-center md:text-left">
-                        <div className="mb-4 flex flex-wrap gap-2 justify-center md:justify-start">
+                        <div className="mb-4 flex flex-wrap gap-2 items-center justify-center md:justify-start">
                             <Link href={`/category/${post.category}`}>
                                 <Badge className="bg-indigo-100 text-indigo-800 hover:bg-indigo-200 cursor-pointer">
                                     {category?.name}
@@ -100,6 +138,10 @@ export default async function PostDetailPage({ params }: PageProps) {
                             <span className="text-sm text-gray-500 flex items-center gap-1">
                                 <Calendar className="h-3 w-3" /> {post.date}
                             </span>
+                            {post.readingTime && (
+                                <span className="text-sm text-gray-500">• {post.readingTime}분 읽기</span>
+                            )}
+                            <span className="text-sm text-gray-400">• 조회 {post.views.toLocaleString()}</span>
                         </div>
 
                         <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 leading-tight mb-6">
@@ -111,39 +153,37 @@ export default async function PostDetailPage({ params }: PageProps) {
                         </p>
                     </header>
 
-                    {/* Ad Slot before content */}
-                    <HorizontalAdSlot className="mb-10 bg-gray-50 border-y border-gray-100 rounded-none mx-[-1rem] md:mx-0 md:rounded-md w-auto" />
+                    {/* Ad Slot before content - 추후 AdSense 승인 후 활성화 */}
+                    {/* <HorizontalAdSlot className="mb-10 bg-gray-50 border-y border-gray-100 rounded-none mx-[-1rem] md:mx-0 md:rounded-md w-auto" /> */}
+
+                    {post.tags && post.tags.length > 0 && (
+                        <div className="mb-8 flex flex-wrap gap-2 items-center">
+                            <Tag className="h-4 w-4 text-gray-400" />
+                            {post.tags.map((tag, idx) => (
+                                <Badge key={idx} variant="secondary" className="text-xs">
+                                    {tag}
+                                </Badge>
+                            ))}
+                        </div>
+                    )}
 
                     <div className="prose prose-lg prose-indigo max-w-none text-gray-800">
                         {/* Simulating content render */}
                         <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                    </div>
 
-                        {/* Mocking more text for the demo to show scroll/layout */}
-                        <h3>주제 심화 탐구</h3>
-                        <p>
-                            실제 시나리오에서는 이 섹션에 상세한 단락, 코드 스니펫, 이미지가 포함될 것입니다.
-                            여기서 초점은 타이포그래피입니다: 큰 기본 글꼴 크기(18px), 넉넉한 줄 간격(1.75),
-                            그리고 눈의 피로를 최소화하기 위한 제한된 너비(약 70자).
+                    {/* 문의 섹션 */}
+                    <div className="mt-12 p-6 bg-blue-50 border border-blue-200 rounded-lg">
+                        <h3 className="font-bold text-blue-900 mb-2">궁금한 점이 있으신가요?</h3>
+                        <p className="text-sm text-blue-800 mb-4">
+                            이 글에 대한 질문이나 정정 요청이 있으시다면 언제든 연락주세요. 
+                            더 정확하고 유용한 정보를 제공하기 위해 노력하겠습니다.
                         </p>
-                        <p>
-                            사용자의 집중력을 유지하기 위해 모바일 콘텐츠 영역에서 사이드바를 의도적으로 피합니다.
-                            광고는 흐름을 너무 심하게 깨지 않으면서도 볼 수 있도록 인라인으로 삽입됩니다.
-                        </p>
-
-                        {/* Inline Ad */}
-                        <div className="my-10 p-4 bg-gray-50 border border-gray-100 rounded-lg flex flex-col items-center">
-                            <span className="text-[10px] uppercase text-gray-400 mb-2 tracking-widest">추천 도구</span>
-                            <div className="text-center">
-                                <h4 className="font-bold text-gray-900">워크플로우 최적화</h4>
-                                <p className="text-sm text-gray-600 mb-3">개발자를 위한 최고의 생산성 앱을 사용해보세요.</p>
-                                <Button size="sm" variant="default">더 알아보기</Button>
-                            </div>
-                        </div>
-
-                        <h3>결론</h3>
-                        <p>
-                            이 레이아웃은 방해가 되지 않는 광고 배치를 통해 수익화 기회를 충분히 제공하면서도 콘텐츠가 중심이 되도록 보장합니다.
-                        </p>
+                        <Link href="/contact">
+                            <Button variant="default" size="sm" className="bg-blue-600 hover:bg-blue-700">
+                                문의하기
+                            </Button>
+                        </Link>
                     </div>
 
                     <div className="border-t border-gray-200 mt-12 pt-8">
@@ -158,8 +198,8 @@ export default async function PostDetailPage({ params }: PageProps) {
                         </div>
                     </div>
 
-                    {/* Ad Slot after content */}
-                    <HorizontalAdSlot className="mt-12" />
+                    {/* Ad Slot after content - 추후 AdSense 승인 후 활성화 */}
+                    {/* <HorizontalAdSlot className="mt-12" /> */}
 
                 </div>
 
@@ -176,7 +216,8 @@ export default async function PostDetailPage({ params }: PageProps) {
                         </ul>
                     </div>
 
-                    <AdSlot label="관련 광고" />
+                    {/* AdSense 승인 후 활성화 */}
+                    {/* <AdSlot label="관련 광고" /> */}
 
                     <div>
                         <h3 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wider">{category?.name} 인기글</h3>

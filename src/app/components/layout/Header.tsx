@@ -7,17 +7,21 @@ import { Input } from '../ui/input';
 import { CATEGORIES } from '../../data/mock';
 import { cn } from '../../../lib/utils';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [searchQuery, setSearchQuery] = React.useState("");
   const pathname = usePathname();
 
+  const router = useRouter();
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("검색 중:", searchQuery);
-    // 실제 앱에서는 검색 페이지로 라우팅됩니다
+    if (searchQuery.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchQuery)}`);
+      setIsMenuOpen(false);
+    }
   };
 
   const isActive = (slug: string) => pathname === `/category/${slug}`;
@@ -33,7 +37,7 @@ export function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">
-          {CATEGORIES.slice(0, 5).map((cat) => (
+          {CATEGORIES.slice(0, 3).map((cat) => (
             <Link
               key={cat.id}
               href={`/category/${cat.slug}`}
@@ -45,6 +49,24 @@ export function Header() {
               {cat.name}
             </Link>
           ))}
+          <Link
+            href="/about"
+            className={cn(
+              "text-sm font-medium transition-colors hover:text-indigo-600",
+              pathname === "/about" ? "text-gray-900" : "text-gray-500"
+            )}
+          >
+            소개
+          </Link>
+          <Link
+            href="/contact"
+            className={cn(
+              "text-sm font-medium transition-colors hover:text-indigo-600",
+              pathname === "/contact" ? "text-gray-900" : "text-gray-500"
+            )}
+          >
+            문의
+          </Link>
         </nav>
 
         {/* Search & Mobile Menu Toggle */}
@@ -90,11 +112,25 @@ export function Header() {
                 key={cat.id}
                 href={`/category/${cat.slug}`}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-base font-medium text-left py-2 border-b border-gray-100 last:border-0 block"
+                className="text-base font-medium text-left py-2 border-b border-gray-100 block"
               >
                 {cat.name}
               </Link>
             ))}
+            <Link
+              href="/about"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-base font-medium text-left py-2 border-b border-gray-100 block"
+            >
+              소개
+            </Link>
+            <Link
+              href="/contact"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-base font-medium text-left py-2 border-b border-gray-100 last:border-0 block"
+            >
+              문의
+            </Link>
           </nav>
         </div>
       )}

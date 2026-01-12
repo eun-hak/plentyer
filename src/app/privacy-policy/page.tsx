@@ -97,6 +97,60 @@ export default function PrivacyPolicyPage() {
         </section>
 
         <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">5-1. 쿠키(Cookie) 및 자동 수집 정보</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Plentyer는 서비스 제공을 위해 쿠키를 사용합니다. 쿠키는 웹사이트가 귀하의 브라우저에 전송하는 작은 텍스트 파일로, 
+            귀하의 컴퓨터 하드디스크에 저장됩니다.
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
+            <li><strong>쿠키의 사용 목적:</strong> 이용자의 방문 및 이용 형태, 보안 접속 여부 등을 파악하여 최적화된 서비스를 제공하기 위함</li>
+            <li><strong>쿠키의 설치/운영 및 거부:</strong> 웹브라우저 상단의 도구 → 인터넷 옵션 → 개인정보 메뉴의 옵션 설정을 통해 쿠키 저장을 거부할 수 있습니다</li>
+            <li><strong>쿠키 저장 거부 시:</strong> 맞춤형 서비스 이용에 어려움이 발생할 수 있습니다</li>
+          </ul>
+          <div className="bg-amber-50 border border-amber-200 p-4 rounded-lg">
+            <p className="text-sm text-amber-900">
+              <strong>자동으로 수집되는 정보:</strong> IP 주소, 브라우저 종류, OS 종류, 방문 일시, 서비스 이용 기록 등이 자동으로 생성되어 수집될 수 있습니다.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">5-2. 광고 서비스 및 제3자 쿠키</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Plentyer는 광고 서비스를 제공하기 위해 제3자 광고 제공업체(Google AdSense 등)를 이용합니다.
+          </p>
+          <div className="bg-blue-50 border border-blue-200 p-6 rounded-lg mb-4">
+            <h3 className="font-semibold mb-3 text-blue-900">Google AdSense</h3>
+            <ul className="space-y-2 text-sm text-blue-900">
+              <li>• Google은 쿠키를 사용하여 사용자가 이 웹사이트 및 다른 웹사이트에 방문한 정보를 기반으로 광고를 게재합니다</li>
+              <li>• 사용자는 Google 광고 설정 페이지(<a href="https://www.google.com/settings/ads" className="underline">www.google.com/settings/ads</a>)에서 맞춤 광고를 사용하지 않도록 설정할 수 있습니다</li>
+              <li>• Google의 개인정보처리방침: <a href="https://policies.google.com/privacy" className="underline">policies.google.com/privacy</a></li>
+            </ul>
+          </div>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            제3자 광고 제공업체는 사용자의 관심사에 기반한 광고를 게재하기 위해 쿠키, 웹 비콘 등의 기술을 사용할 수 있습니다. 
+            이러한 기술을 통해 수집되는 정보는 해당 제3자의 개인정보처리방침에 따라 관리됩니다.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">5-3. 웹 로그 분석</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            서비스 개선 및 통계 분석을 위해 다음과 같은 정보가 자동으로 수집될 수 있습니다:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700">
+            <li>방문자의 IP 주소</li>
+            <li>브라우저 종류 및 OS 정보</li>
+            <li>방문 일시 및 서비스 이용 기록</li>
+            <li>방문 경로 (referrer)</li>
+            <li>페이지 조회 수 및 체류 시간</li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed mt-4">
+            이러한 정보는 개인을 식별할 수 없는 형태로 수집되며, 통계 자료로만 활용됩니다.
+          </p>
+        </section>
+
+        <section className="mb-8">
           <h2 className="text-2xl font-bold mb-4 text-gray-900">6. 정보주체의 권리·의무 및 행사방법</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
             정보주체는 Plentyer에 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다:
@@ -132,11 +186,26 @@ export default function PrivacyPolicyPage() {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4 text-gray-900">9. 개인정보 처리방침 변경</h2>
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">9. 아동의 개인정보 보호</h2>
           <p className="text-gray-700 leading-relaxed">
+            Plentyer는 만 14세 미만 아동의 개인정보를 보호하기 위하여 만 14세 미만 아동의 회원가입을 받지 않습니다. 
+            부득이하게 만 14세 미만 아동의 개인정보를 수집해야 하는 경우에는 법정대리인의 동의를 받습니다.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">10. 개인정보 처리방침 변경</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
             이 개인정보 처리방침은 2025년 1월 1일부터 적용되며, 법령 및 방침에 따른 변경내용의 추가, 삭제 및 정정이 있는 경우에는 
             변경사항의 시행 7일 전부터 공지사항을 통하여 고지할 것입니다.
           </p>
+          <div className="bg-indigo-50 border border-indigo-200 p-6 rounded-lg">
+            <p className="text-sm text-indigo-900">
+              <strong>문의 및 신고:</strong><br />
+              개인정보 처리방침에 대한 문의사항이 있으시면 <Link href="/contact" className="underline font-semibold">문의하기</Link> 페이지를 통해 연락해 주시기 바랍니다.<br />
+              이메일: privacy@plentyer.com
+            </p>
+          </div>
         </section>
       </article>
     </div>

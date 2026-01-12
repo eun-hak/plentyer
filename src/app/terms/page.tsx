@@ -125,7 +125,71 @@ export default function TermsPage() {
         </section>
 
         <section className="mb-8">
-          <h2 className="text-2xl font-bold mb-4 text-gray-900">제10조 (준거법 및 관할법원)</h2>
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">제10조 (저작권의 귀속 및 이용제한)</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            회사가 작성한 저작물에 대한 저작권 기타 지적재산권은 회사에 귀속합니다.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            이용자는 서비스를 이용함으로써 얻은 정보 중 회사에게 지적재산권이 귀속된 정보를 회사의 사전 승낙 없이 복제, 송신, 출판, 배포, 방송 기타 방법에 의하여 
+            영리목적으로 이용하거나 제3자에게 이용하게 하여서는 안 됩니다.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            회원이 서비스 내에 게시한 게시물의 저작권은 해당 게시물의 저작자에게 귀속됩니다. 단, 회사는 서비스의 운영, 전시, 전송, 배포, 홍보 등의 목적으로 
+            회원의 별도 동의 없이 무상으로 저작권법에서 정하는 공정한 관행에 합치되게 합리적인 범위 내에서 다음과 같이 회원이 등록한 게시물을 사용할 수 있습니다:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 mt-2">
+            <li>서비스 내에서 회원 게시물의 복제, 수정, 개조, 전시, 전송, 배포 및 저작물성을 해치지 않는 범위 내에서의 편집 저작물 작성</li>
+            <li>미디어, 통신사 등 서비스 제휴 파트너에게 회원의 게시물 내용을 제공, 전시 혹은 홍보하게 하는 것. 단, 이 경우 회사는 별도의 동의 없이 회원의 개인정보를 제공하지 않습니다</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">제11조 (콘텐츠 및 광고)</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            회사는 서비스 운영과 관련하여 회원에게 다양한 정보를 공지사항, 이메일, 서비스 화면 등의 방법으로 제공할 수 있습니다.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            회사는 서비스의 운영과 관련하여 서비스 화면, 홈페이지 등에 광고를 게재할 수 있습니다. 광고가 게재된 이메일 등을 수신한 회원은 
+            수신거부를 회사에게 할 수 있습니다.
+          </p>
+          <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
+            <p className="text-sm text-yellow-900">
+              <strong>광고 제공:</strong> 본 서비스는 Google AdSense를 포함한 제3자 광고 서비스를 이용하여 광고를 게재합니다. 
+              광고주 또는 광고 네트워크는 쿠키 등의 기술을 사용할 수 있으며, 이는 해당 제3자의 개인정보처리방침을 따릅니다.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">제12조 (금지행위)</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">회원은 서비스 이용 시 다음 각 호의 행위를 하여서는 안 됩니다:</p>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700">
+            <li>타인의 정보 도용 및 부정 사용</li>
+            <li>회사의 서비스 정보를 이용하여 얻은 정보를 회사의 사전 승낙 없이 복제, 유통, 조장하거나 상업적으로 이용하는 행위</li>
+            <li>타인의 명예를 손상시키거나 불이익을 주는 행위</li>
+            <li>게시판 등에 음란물을 게재하거나 음란사이트를 링크하는 행위</li>
+            <li>회사의 저작권, 제3자의 저작권 등 기타 권리를 침해하는 행위</li>
+            <li>공공질서 및 미풍양속에 위반되는 내용의 정보, 문장, 도형, 음성 등을 타인에게 유포하는 행위</li>
+            <li>서비스와 관련된 설비의 오동작이나 정보 등의 파괴 및 혼란을 유발시키는 컴퓨터 바이러스 감염 자료를 등록 또는 유포하는 행위</li>
+            <li>스팸(spam)성 게시물 등록 및 타 사이트로의 링크를 통한 상업적 목적의 광고 게시</li>
+            <li>기타 불법적이거나 부당한 행위</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">제13조 (게시물의 관리)</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            회원의 게시물이 정보통신망법 및 저작권법 등 관련법에 위반되는 내용을 포함하는 경우, 권리자는 관련법이 정한 절차에 따라 
+            해당 게시물의 게시중단 및 삭제 등을 요청할 수 있으며, 회사는 관련법에 따라 조치를 취하여야 합니다.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            회사는 전항에 따른 권리자의 요청이 없는 경우라도 권리침해가 인정될 만한 사유가 있거나 기타 회사 정책 및 관련법에 위반되는 경우에는 
+            관련법에 따라 해당 게시물에 대해 임시조치 등을 취할 수 있습니다.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">제14조 (준거법 및 관할법원)</h2>
           <p className="text-gray-700 leading-relaxed mb-4">
             이 약관의 해석 및 회사와 회원 간의 분쟁에 대하여는 대한민국의 법을 적용합니다.
           </p>
@@ -133,6 +197,14 @@ export default function TermsPage() {
             이 약관 및 서비스 이용과 관련하여 발생한 분쟁에 대하여는 대한민국 서울중앙지방법원을 관할법원으로 합니다.
           </p>
         </section>
+
+        <div className="mt-12 p-6 bg-gray-50 border border-gray-200 rounded-lg">
+          <h3 className="font-bold text-lg mb-2 text-gray-900">부칙</h3>
+          <p className="text-sm text-gray-600">본 약관은 2025년 1월 1일부터 시행됩니다.</p>
+          <p className="text-sm text-gray-600 mt-2">
+            이용약관에 대한 문의사항이 있으시면 <Link href="/contact" className="text-indigo-600 underline font-semibold">문의하기</Link> 페이지를 통해 연락해 주시기 바랍니다.
+          </p>
+        </div>
       </article>
     </div>
   );
