@@ -1,17 +1,15 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://plentyer.com';
-  
+  // 모든 검색 엔진 크롤링 차단 (도메인 연결 전까지)
   return {
     rules: [
       {
         userAgent: '*',
-        allow: '/',
-        disallow: ['/api/', '/admin/'],
+        disallow: '/',
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
+    // sitemap은 색인이 차단되어 있으므로 제외
   };
 }
 
