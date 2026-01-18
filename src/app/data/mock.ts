@@ -22,14 +22,122 @@ export interface Post {
 }
 
 export const CATEGORIES: Category[] = [
-  { id: '1', name: '가이드', slug: 'guide', description: '초보자를 위한 게임 시작 가이드와 기본 팁.', count: 6 },
-  { id: '2', name: '공략', slug: 'strategy', description: '게임 공략, 전략, 고급 팁과 메타 분석.', count: 3 },
-  { id: '3', name: '리뷰', slug: 'review', description: '최신 게임부터 클래식까지 심도있는 리뷰.', count: 3 },
+  { id: '1', name: '가이드', slug: 'guide', description: '초보자를 위한 게임 시작 가이드와 기본 팁.', count: 9 },
+  { id: '2', name: '공략', slug: 'strategy', description: '게임 공략, 전략, 고급 팁과 메타 분석.', count: 6 },
+  { id: '3', name: '리뷰', slug: 'review', description: '최신 게임부터 클래식까지 심도있는 리뷰.', count: 6 },
 ];
 
 import { POST_CONTENTS } from './posts-content';
 
 export const POSTS: Post[] = [
+  {
+    id: '21',
+    title: '게이밍 하드웨어 구매 리뷰: 체감 성능을 기준으로 한 합리적 선택법',
+    summary: '게이밍 하드웨어를 CPU/GPU, 메모리/저장장치, 모니터, 입력 장치 등 구성 요소별로 분석한 구매 리뷰. 스펙이 아닌 체감 성능과 사용 목적에 맞는 합리적 선택 기준을 제시합니다.',
+    content: POST_CONTENTS['gaming-hardware-buying-review'],
+    category: 'review',
+    date: '2026-01-21',
+    slug: 'gaming-hardware-buying-review',
+    views: 7892,
+    tags: ['하드웨어', 'PC', '구매가이드', '리뷰', 'CPU', 'GPU', '모니터'],
+    readingTime: 7
+  },
+  {
+    id: '20',
+    title: '콘솔 vs PC 게이밍 리뷰: 플레이 환경에 따른 선택 기준 정리',
+    summary: '콘솔과 PC 게이밍을 접근성, 성능, 조작 방식, 게임 라이브러리, 비용 등 객관적 기준으로 비교 분석한 리뷰. 사용자의 플레이 성향과 환경에 맞는 선택 기준을 제시합니다.',
+    content: POST_CONTENTS['console-vs-pc-gaming-review'],
+    category: 'review',
+    date: '2026-01-20',
+    slug: 'console-vs-pc-gaming-review',
+    views: 6789,
+    tags: ['콘솔', 'PC', '비교', '리뷰', '구매가이드', '플레이스테이션', 'Xbox'],
+    readingTime: 7
+  },
+  {
+    id: '19',
+    title: '인디 게임 리뷰: 대작과 다른 재미를 만드는 이유',
+    summary: '인디 게임의 장점과 한계를 객관적으로 분석한 리뷰. 명확한 방향성, 그래픽 스타일, 플레이 타임 특징, 한계 요소, 추천 유저 타입 등 인디 게임의 본질을 정리합니다.',
+    content: POST_CONTENTS['indie-game-review'],
+    category: 'review',
+    date: '2026-01-19',
+    slug: 'indie-game-review',
+    views: 5234,
+    tags: ['인디게임', '리뷰', 'Celeste', 'Stardew Valley', 'Hades'],
+    readingTime: 6
+  },
+  {
+    id: '18',
+    title: '경쟁 게임 마인드셋 공략: 랭크에서 흔들리지 않는 사고방식',
+    summary: '발로란트, 오버워치, 리그 오브 레전드 등 경쟁 게임에서 안정적인 랭크 플레이를 위한 마인드셋 공략. 통제 가능한 요소 집중, 틸트 인지, 손실 최소화, 커뮤니케이션, 복기 습관 등 판단 구조 안정화 방법을 정리합니다.',
+    content: POST_CONTENTS['competitive-gaming-mindset-strategy'],
+    category: 'strategy',
+    date: '2026-01-18',
+    slug: 'competitive-gaming-mindset-strategy',
+    views: 4156,
+    tags: ['경쟁게임', '랭크', '마인드셋', '멘탈', '공략', '틸트'],
+    readingTime: 7
+  },
+  {
+    id: '17',
+    title: '전략 게임 자원 관리 공략: 패배를 막는 운영의 핵심 원칙',
+    summary: 'RTS와 턴제 전략 게임에서 승패를 좌우하는 자원 관리 공략. 자원 구분, 초반 경제 안정화, 생산 대기열 관리, 확장 타이밍, 전투와 경제의 균형 등 운영 핵심을 정리합니다.',
+    content: POST_CONTENTS['strategy-game-resource-management-guide'],
+    category: 'strategy',
+    date: '2026-01-17',
+    slug: 'strategy-game-resource-management-guide',
+    views: 3421,
+    tags: ['전략게임', 'RTS', '자원관리', '공략', '경제 운영'],
+    readingTime: 7
+  },
+  {
+    id: '16',
+    title: 'MOBA 라인전 공략: 초반 주도권을 잡는 실전 운영 핵심',
+    summary: '리그 오브 레전드, 도타 2 등 MOBA 게임의 라인전에서 초반 주도권을 잡기 위한 목표 설정, 파밍 안정화, 웨이브 관리, 견제 타이밍, 시야 장악 등 실전 운영 핵심을 정리합니다.',
+    content: POST_CONTENTS['moba-laning-phase-strategy'],
+    category: 'strategy',
+    date: '2026-01-16',
+    slug: 'moba-laning-phase-strategy',
+    views: 3892,
+    tags: ['MOBA', 'LOL', '도타2', '라인전', '공략', '웨이브 관리'],
+    readingTime: 7
+  },
+  {
+    id: '15',
+    title: '게임 스트리밍 시작 가이드: 처음부터 무리 없이 준비하는 방법',
+    summary: '게임 스트리밍을 처음 시작하려는 유저를 위한 목적 설정, 필수 장비 기준, OBS 기본 설정, 플랫폼 선택, 초반 태도 등 안정적인 방송을 위한 핵심 가이드입니다.',
+    content: POST_CONTENTS['game-streaming-beginner-guide'],
+    category: 'guide',
+    date: '2026-01-15',
+    slug: 'game-streaming-beginner-guide',
+    views: 2876,
+    tags: ['스트리밍', '방송', 'OBS', '초보자 가이드', '게임 팁'],
+    readingTime: 6
+  },
+  {
+    id: '14',
+    title: '오픈월드 게임 초보자 가이드: 길 잃지 않고 즐기는 탐험의 기본',
+    summary: '오픈월드 게임 초보자를 위한 메인 퀘스트 활용법, 맵 해금 전략, 전투 준비 요소, 탐험 보상 판단 기준 등 방향 상실 없이 즐기는 핵심 가이드입니다.',
+    content: POST_CONTENTS['open-world-beginner-guide'],
+    category: 'guide',
+    date: '2026-01-14',
+    slug: 'open-world-beginner-guide',
+    views: 3124,
+    tags: ['오픈월드', '초보자 가이드', '탐험', '게임 팁', 'RPG'],
+    readingTime: 6
+  },
+  {
+    id: '13',
+    title: '모바일 RPG 초보자 가이드: 성장 막히지 않게 시작하는 핵심 정리',
+    summary: '모바일 RPG 초보자를 위한 초반 목표 설정, 캐릭터 육성 전략, 재화 관리, 일일 루틴 정리 등 성장을 막히지 않게 하는 핵심 가이드입니다.',
+    content: POST_CONTENTS['mobile-rpg-beginner-guide'],
+    category: 'guide',
+    date: '2026-01-13',
+    slug: 'mobile-rpg-beginner-guide',
+    views: 2156,
+    tags: ['모바일게임', 'RPG', '초보자 가이드', '육성', '팁'],
+    readingTime: 6
+  },
   {
     id: '1',
     title: 'FPS 게임 입문자를 위한 완벽 가이드',
