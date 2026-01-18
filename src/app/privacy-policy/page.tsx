@@ -179,8 +179,7 @@ export default function PrivacyPolicyPage() {
           <div className="bg-gray-50 p-6 rounded-lg">
             <p className="text-gray-700">
               <strong>개인정보 보호책임자</strong><br />
-              이메일: privacy@plentyer.com<br />
-              전화: 02-1234-5678
+              이메일: plentyer.comp@gmail.com<br />
             </p>
           </div>
         </section>
@@ -203,7 +202,7 @@ export default function PrivacyPolicyPage() {
             <p className="text-sm text-indigo-900">
               <strong>문의 및 신고:</strong><br />
               개인정보 처리방침에 대한 문의사항이 있으시면 <Link href="/contact" className="underline font-semibold">문의하기</Link> 페이지를 통해 연락해 주시기 바랍니다.<br />
-              이메일: privacy@plentyer.com
+              이메일: plentyer.comp@gmail.com
             </p>
           </div>
         </section>

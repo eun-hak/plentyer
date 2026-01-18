@@ -97,16 +97,10 @@ export default function Home() {
                             {/* 
                                 AdSense 승인 후 사이드바 광고 영역 추가 예정
                                 - AdSlot (300x250) 배치
-                                - 위치: 사이드바 상단, 뉴스레터 위
+                                - 위치: 사이드바 상단, 인기 주제 위
                             */}
 
-                            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-lg border border-indigo-100">
-                                <h3 className="text-lg font-bold text-indigo-900 mb-2">Plentyer 뉴스레터</h3>
-                                <p className="text-sm text-indigo-700 mb-4">매주 엄선된 콘텐츠를 받아보세요</p>
-                                <Button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white">구독하기</Button>
-                            </div>
-
-                            <div className="mt-8">
+                            <div>
                                 <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">인기 주제</h3>
                                 <div className="flex flex-wrap gap-2">
                                     {CATEGORIES.map(cat => (

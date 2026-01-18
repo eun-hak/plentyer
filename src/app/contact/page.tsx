@@ -82,10 +82,10 @@ export default function ContactPage() {
               이메일로 직접 문의하실 수 있습니다:
             </p>
             <a 
-              href="mailto:contact@plentyer.com" 
+              href="mailto:plentyer.comp@gmail.com" 
               className="text-indigo-600 font-semibold hover:underline block"
             >
-              contact@plentyer.com
+              plentyer.comp@gmail.com
             </a>
             <p className="text-xs text-gray-500 mt-3">
               평일 기준 24-48시간 내 답변
@@ -249,7 +249,7 @@ export default function ContactPage() {
               <div>
                 <p className="font-semibold text-gray-900">Q. 광고는 어떻게 게재하나요?</p>
                 <p className="text-gray-700">
-                  A. 광고 문의는 contact@plentyer.com으로 보내주시면 담당자가 연락드립니다.
+                  A. 광고 문의는 plentyer.comp@gmail.com으로 보내주시면 담당자가 연락드립니다.
                 </p>
               </div>
             </div>
@@ -263,20 +263,20 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="p-4 border border-gray-200 rounded-lg hover:border-indigo-300 transition-colors">
             <h3 className="font-semibold text-gray-900 mb-2">일반 문의</h3>
-            <a href="mailto:contact@plentyer.com" className="text-indigo-600 text-sm hover:underline">
-              contact@plentyer.com
+            <a href="mailto:plentyer.comp@gmail.com" className="text-indigo-600 text-sm hover:underline">
+              plentyer.comp@gmail.com
             </a>
           </div>
           <div className="p-4 border border-gray-200 rounded-lg hover:border-indigo-300 transition-colors">
             <h3 className="font-semibold text-gray-900 mb-2">개인정보 관련</h3>
-            <a href="mailto:privacy@plentyer.com" className="text-indigo-600 text-sm hover:underline">
-              privacy@plentyer.com
+            <a href="mailto:plentyer.comp@gmail.com" className="text-indigo-600 text-sm hover:underline">
+              plentyer.comp@gmail.com
             </a>
           </div>
           <div className="p-4 border border-gray-200 rounded-lg hover:border-indigo-300 transition-colors">
             <h3 className="font-semibold text-gray-900 mb-2">제휴 및 협업</h3>
-            <a href="mailto:partner@plentyer.com" className="text-indigo-600 text-sm hover:underline">
-              partner@plentyer.com
+            <a href="mailto:plentyer.comp@gmail.com" className="text-indigo-600 text-sm hover:underline">
+              plentyer.comp@gmail.com
             </a>
           </div>
         </div>

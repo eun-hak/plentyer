@@ -190,3 +190,4 @@ This project is private and proprietary.
 
 **참고**: 이 프로젝트는 Google AdSense 정책을 준수하도록 설계되었습니다.  
 실제 배포 전 [AdSense 프로그램 정책](https://support.google.com/adsense/answer/48182)을 반드시 확인하세요.
+  

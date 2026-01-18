@@ -39,8 +39,8 @@ export function Footer() {
         </div>
         
         <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
-          <p>© 2025 Plentyer. 모든 권리 보유.</p>
-          <p>풍요로운 지식, 계층화된 성장</p>
+          <p>© 2025 Plentyer.  All rights reserved.</p>
+         
         </div>
       </div>
     </footer>
