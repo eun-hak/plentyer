@@ -52,13 +52,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  // 포스트 페이지
+  // 포스트 페이지 - 모든 게시글 포함
   const postPages: MetadataRoute.Sitemap = POSTS.map((post) => ({
     url: `${baseUrl}/post/${post.id}`,
     lastModified: new Date(post.date),
     changeFrequency: 'monthly',
     priority: 0.7,
   }));
+
+  // 총 URL 개수: 정적 페이지(6) + 카테고리(3) + 포스트(POSTS.length)
+  // 개발 환경에서만 로그 출력
+  if (process.env.NODE_ENV === 'development') {
+    console.log(`[Sitemap] 총 ${staticPages.length + categoryPages.length + postPages.length}개 URL 생성 (포스트: ${postPages.length}개)`);
+  }
 
   return [...staticPages, ...categoryPages, ...postPages];
 }
