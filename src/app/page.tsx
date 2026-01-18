@@ -89,7 +89,6 @@ export default function Home() {
                             ))}
                         </div>
                         <div className="pt-8">
-                            <Button variant="outline" className="w-full sm:w-auto">더 많은 글 보기</Button>
                         </div>
                     </div>
 
