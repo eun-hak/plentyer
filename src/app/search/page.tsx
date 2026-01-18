@@ -135,12 +135,8 @@ export default function SearchPage() {
       {/* 전체 카테고리 링크 */}
       <div className="mt-16 pt-16 border-t border-gray-200">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">카테고리별로 찾아보기</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-2xl mx-auto">
           {[
-            { name: 'PC 게임', slug: 'pc' },
-            { name: '콘솔 게임', slug: 'console' },
-            { name: '모바일 게임', slug: 'mobile' },
-            { name: 'e스포츠', slug: 'esports' },
             { name: '가이드', slug: 'guide' },
             { name: '공략', slug: 'strategy' },
             { name: '리뷰', slug: 'review' },

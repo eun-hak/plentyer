@@ -37,7 +37,7 @@ export function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6">
-          {CATEGORIES.slice(0, 3).map((cat) => (
+          {CATEGORIES.map((cat) => (
             <Link
               key={cat.id}
               href={`/category/${cat.slug}`}

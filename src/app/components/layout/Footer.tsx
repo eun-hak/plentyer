@@ -24,7 +24,7 @@ export function Footer() {
               <li><Link href="/" className="hover:text-indigo-600">홈</Link></li>
               <li><Link href="/about" className="hover:text-indigo-600">사이트 소개</Link></li>
               <li><Link href="/contact" className="hover:text-indigo-600">문의하기</Link></li>
-              <li><Link href="/category/pc" className="hover:text-indigo-600">카테고리</Link></li>
+              <li><Link href="/category/guide" className="hover:text-indigo-600">카테고리</Link></li>
             </ul>
           </div>
 

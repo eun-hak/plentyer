@@ -22,13 +22,9 @@ export interface Post {
 }
 
 export const CATEGORIES: Category[] = [
-  { id: '1', name: 'PC 게임', slug: 'pc', description: 'PC 게임 리뷰, 공략, 추천 게임 소개.', count: 52 },
-  { id: '2', name: '콘솔 게임', slug: 'console', description: '플레이스테이션, 엑스박스, 닌텐도 스위치 게임 리뷰와 공략.', count: 38 },
-  { id: '3', name: '모바일 게임', slug: 'mobile', description: '모바일 게임 리뷰, 추천, 업데이트 소식.', count: 45 },
-  { id: '4', name: 'e스포츠', slug: 'esports', description: '프로 게임 리그, 경기 분석, 선수 소식.', count: 29 },
-  { id: '5', name: '가이드', slug: 'guide', description: '초보자를 위한 게임 시작 가이드와 기본 팁.', count: 34 },
-  { id: '6', name: '공략', slug: 'strategy', description: '게임 공략, 전략, 고급 팁과 메타 분석.', count: 41 },
-  { id: '7', name: '리뷰', slug: 'review', description: '최신 게임부터 클래식까지 심도있는 리뷰.', count: 28 },
+  { id: '1', name: '가이드', slug: 'guide', description: '초보자를 위한 게임 시작 가이드와 기본 팁.', count: 6 },
+  { id: '2', name: '공략', slug: 'strategy', description: '게임 공략, 전략, 고급 팁과 메타 분석.', count: 3 },
+  { id: '3', name: '리뷰', slug: 'review', description: '최신 게임부터 클래식까지 심도있는 리뷰.', count: 3 },
 ];
 
 import { POST_CONTENTS } from './posts-content';

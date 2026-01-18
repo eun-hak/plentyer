@@ -34,14 +34,16 @@ export default function Home() {
                     게이머를 위한 최고의 콘텐츠를 제공합니다.
                 </p>
                 <div className="flex justify-center gap-4 pt-4">
-                    <Link href="/category/pc">
+                    <Link href="/category/guide">
                         <Button size="lg" className="rounded-full px-8 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700">
                             게임 탐험하기
                         </Button>
                     </Link>
-                    <Button size="lg" variant="outline" className="rounded-full px-8 border-indigo-600 text-indigo-600 hover:bg-indigo-50">
-                        카테고리 둘러보기
-                    </Button>
+                    <Link href="/category/strategy">
+                        <Button size="lg" variant="outline" className="rounded-full px-8 border-indigo-600 text-indigo-600 hover:bg-indigo-50">
+                            공략 둘러보기
+                        </Button>
+                    </Link>
                 </div>
             </section>
 
