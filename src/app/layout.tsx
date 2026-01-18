@@ -1,4 +1,5 @@
 import React from 'react';
+import Script from 'next/script';
 import '../styles/index.css';
 import '../styles/tailwind.css';
 import '../styles/fonts.css';
@@ -58,6 +59,12 @@ export const metadata = {
             'max-snippet': -1,
         },
     },
+    verification: {
+        google: 'nGLC6wqeingyxdWpDtTR9DKlBw7TNDT9A8_l8PrHWt0',
+        other: {
+            'naver-site-verification': '094139038ce6770db27aa5907e4d187026f34334',
+        },
+    },
 };
 
 export default function RootLayout({
@@ -67,7 +74,24 @@ export default function RootLayout({
 }) {
     return (
         <html lang="ko" suppressHydrationWarning>
+            <head>
+                <meta name="naver-site-verification" content="094139038ce6770db27aa5907e4d187026f34334" />
+            </head>
             <body className="font-sans antialiased text-gray-900 bg-white" suppressHydrationWarning>
+                {/* Google Analytics */}
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-ZCMSKGVQ2M"
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-ZCMSKGVQ2M');
+                    `}
+                </Script>
+                
                 <SuppressHydrationWarning />
                 <Header />
                 <main suppressHydrationWarning>{children}</main>
