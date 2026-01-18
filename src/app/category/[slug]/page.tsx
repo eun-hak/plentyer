@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import { POSTS, CATEGORIES } from '../../data/mock';
 import { PostCard } from '../../components/blog/PostCard';
-import { HorizontalAdSlot, AdSlot } from '../../components/blog/AdSlot';
+// import { HorizontalAdSlot, AdSlot } from '../../components/blog/AdSlot'; // AdSense 승인 후 활성화
 import { Button } from '../../components/ui/button';
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
@@ -76,7 +76,11 @@ export default async function CategoryPage({ params }: PageProps) {
                             <div key={post.id} className="flex flex-col gap-8">
                                 {/* PostCard now handles navigation internally via Link */}
                                 <PostCard post={post} />
-                                {index === 1 && <HorizontalAdSlot label="스폰서" />}
+                                {/* 
+                                    AdSense 승인 후 광고 영역 추가 예정
+                                    - 두 번째 게시글 아래에 HorizontalAdSlot (728x90) 배치
+                                    - 위치: 게시글 목록 중간
+                                */}
                             </div>
                         ))}
 
@@ -94,7 +98,11 @@ export default async function CategoryPage({ params }: PageProps) {
 
                 {/* Sidebar */}
                 <div className="w-full md:w-80 shrink-0 space-y-8">
-                    <AdSlot />
+                    {/* 
+                        AdSense 승인 후 사이드바 광고 영역 추가 예정
+                        - AdSlot (300x250) 배치
+                        - 위치: 사이드바 상단, 카테고리 소개 위
+                    */}
 
                     <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
                         <h3 className="font-bold text-gray-900 mb-4">{category.name} 소개</h3>

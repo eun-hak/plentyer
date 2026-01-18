@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { POSTS, CATEGORIES } from './data/mock';
 import { PostCard } from './components/blog/PostCard';
-import { HorizontalAdSlot, AdSlot } from './components/blog/AdSlot';
+// import { HorizontalAdSlot, AdSlot } from './components/blog/AdSlot'; // AdSense 승인 후 활성화
 import { Button } from './components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -58,10 +58,11 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Ad Slot */}
-            <section className="container mx-auto px-4 max-w-3xl">
-                <HorizontalAdSlot />
-            </section>
+            {/* 
+                AdSense 승인 후 광고 영역 추가 예정
+                - 추천 콘텐츠와 최신 업데이트 사이에 HorizontalAdSlot (728x90) 배치
+                - 위치: 추천 콘텐츠 섹션 아래
+            */}
 
             {/* Recent Posts List */}
             <section className="container mx-auto px-4 max-w-5xl">
@@ -91,12 +92,15 @@ export default function Home() {
                     </div>
 
                     <div className="md:col-span-4 space-y-8">
-                        {/* Sidebar Ad */}
+                        {/* Sidebar */}
                         <div className="sticky top-24">
-                            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">광고</h3>
-                            <AdSlot className="my-0" />
+                            {/* 
+                                AdSense 승인 후 사이드바 광고 영역 추가 예정
+                                - AdSlot (300x250) 배치
+                                - 위치: 사이드바 상단, 뉴스레터 위
+                            */}
 
-                            <div className="mt-8 bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-lg border border-indigo-100">
+                            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-lg border border-indigo-100">
                                 <h3 className="text-lg font-bold text-indigo-900 mb-2">Plentyer 뉴스레터</h3>
                                 <p className="text-sm text-indigo-700 mb-4">매주 엄선된 콘텐츠를 받아보세요</p>
                                 <Button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white">구독하기</Button>

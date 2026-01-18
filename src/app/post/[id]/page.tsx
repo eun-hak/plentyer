@@ -2,7 +2,8 @@ import React from 'react';
 import { Metadata } from 'next';
 import { POSTS, CATEGORIES } from '../../data/mock';
 import { PostCard } from '../../components/blog/PostCard';
-import { HorizontalAdSlot, AdSlot } from '../../components/blog/AdSlot';
+import { TableOfContents } from '../../components/blog/TableOfContents';
+// import { HorizontalAdSlot, AdSlot } from '../../components/blog/AdSlot'; // AdSense 승인 후 활성화
 import { Badge } from '../../components/ui/badge';
 import { Button } from '../../components/ui/button';
 import { ChevronRight, Calendar, Tag, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
@@ -108,144 +109,154 @@ export default async function PostDetailPage({ params }: PageProps) {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             
-            <article className="pb-20">
+            <article className="pb-10">
             {/* Breadcrumb */}
-            <div className="bg-gray-50 border-b border-gray-100">
-                <div className="container mx-auto px-4 max-w-5xl py-4">
-                    <div className="flex items-center text-sm text-gray-500 overflow-x-auto whitespace-nowrap">
+            <nav className="bg-gray-50 border-b border-gray-100" aria-label="Breadcrumb">
+                <div className="container mx-auto px-4 max-w-5xl py-2.5">
+                    <div className="flex items-center text-xs sm:text-sm text-gray-500 overflow-x-auto whitespace-nowrap">
                         <Link href="/" className="hover:text-indigo-600 cursor-pointer">홈</Link>
-                        <ChevronRight className="h-4 w-4 mx-1 flex-shrink-0" />
+                        <ChevronRight className="h-3 w-3 mx-1 flex-shrink-0" />
                         <Link href={`/category/${post.category}`} className="hover:text-indigo-600 cursor-pointer">
                             {category?.name || post.category}
                         </Link>
-                        <ChevronRight className="h-4 w-4 mx-1 flex-shrink-0" />
+                        <ChevronRight className="h-3 w-3 mx-1 flex-shrink-0" />
                         <span className="font-medium text-gray-900 truncate max-w-[200px]">{post.title}</span>
                     </div>
                 </div>
-            </div>
+            </nav>
 
-            <div className="container mx-auto px-4 max-w-5xl py-12 flex flex-col md:flex-row gap-12">
+            <div className="container mx-auto px-4 max-w-5xl py-6 flex flex-col md:flex-row gap-6">
                 {/* Main Content Column - Max width constrained for readability */}
-                <div className="flex-1 max-w-[740px] mx-auto w-full">
+                <div className="flex-1 max-w-[680px] mx-auto w-full">
 
-                    <header className="mb-8 text-center md:text-left">
-                        <div className="mb-4 flex flex-wrap gap-2 items-center justify-center md:justify-start">
+                    <header className="mb-5 text-center md:text-left">
+                        <div className="mb-2.5 flex flex-wrap gap-1.5 items-center justify-center md:justify-start text-xs">
                             <Link href={`/category/${post.category}`}>
-                                <Badge className="bg-indigo-100 text-indigo-800 hover:bg-indigo-200 cursor-pointer">
+                                <Badge className="bg-indigo-100 text-indigo-800 hover:bg-indigo-200 cursor-pointer text-xs px-2 py-0.5">
                                     {category?.name}
                                 </Badge>
                             </Link>
-                            <span className="text-sm text-gray-500 flex items-center gap-1">
+                            <span className="text-gray-500 flex items-center gap-1">
                                 <Calendar className="h-3 w-3" /> {post.date}
                             </span>
                             {post.readingTime && (
-                                <span className="text-sm text-gray-500">• {post.readingTime}분 읽기</span>
+                                <span className="text-gray-500">• {post.readingTime}분 읽기</span>
                             )}
-                            <span className="text-sm text-gray-400">• 조회 {post.views.toLocaleString()}</span>
+                            <span className="text-gray-400">• 조회 {post.views.toLocaleString()}</span>
                         </div>
 
-                        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 leading-tight mb-6">
+                        <h1 className="text-xl md:text-3xl font-bold tracking-tight text-gray-900 leading-tight mb-3">
                             {post.title}
                         </h1>
 
-                        <p className="text-xl text-gray-500 leading-relaxed font-light">
+                        <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                             {post.summary}
                         </p>
                     </header>
 
-                    {/* Ad Slot before content - 추후 AdSense 승인 후 활성화 */}
-                    {/* <HorizontalAdSlot className="mb-10 bg-gray-50 border-y border-gray-100 rounded-none mx-[-1rem] md:mx-0 md:rounded-md w-auto" /> */}
+                    {/* 
+                        AdSense 승인 후 광고 영역 추가 예정
+                        - 본문 시작 전: HorizontalAdSlot (728x90) 또는 In-Article Ad
+                        - 본문 중간 (약 300-500자 읽은 후): In-Article Ad 또는 HorizontalAdSlot
+                        - 본문 끝나기 전: HorizontalAdSlot (728x90)
+                    */}
 
                     {post.tags && post.tags.length > 0 && (
-                        <div className="mb-8 flex flex-wrap gap-2 items-center">
-                            <Tag className="h-4 w-4 text-gray-400" />
+                        <div className="mb-5 flex flex-wrap gap-1.5 items-center">
+                            <Tag className="h-3.5 w-3.5 text-gray-400" />
                             {post.tags.map((tag, idx) => (
-                                <Badge key={idx} variant="secondary" className="text-xs">
+                                <Badge key={idx} variant="secondary" className="text-xs px-2 py-0.5">
                                     {tag}
                                 </Badge>
                             ))}
                         </div>
                     )}
 
-                    <div className="prose prose-lg prose-indigo max-w-none text-gray-800">
-                        {/* Simulating content render */}
-                        <div dangerouslySetInnerHTML={{ __html: post.content }} />
-                    </div>
+                    <section className="article-content text-gray-800">
+                        <div className="[&_h2]:text-lg md:[&_h2]:text-xl [&_h2]:font-bold [&_h2]:text-gray-900 [&_h2]:mt-6 [&_h2]:mb-3 [&_h2]:pb-2 [&_h2]:border-b [&_h2]:border-gray-200
+                            [&_h3]:text-base md:[&_h3]:text-lg [&_h3]:font-semibold [&_h3]:text-gray-900 [&_h3]:mt-5 [&_h3]:mb-2.5
+                            [&_p]:text-sm md:[&_p]:text-base [&_p]:leading-relaxed [&_p]:mb-3 [&_p]:text-gray-700
+                            [&_ul]:my-3 [&_ul]:ml-5 [&_ul]:list-disc [&_ul]:space-y-1.5
+                            [&_ol]:my-3 [&_ol]:ml-5 [&_ol]:list-decimal [&_ol]:space-y-1.5
+                            [&_li]:text-sm md:[&_li]:text-base [&_li]:text-gray-700 [&_li]:leading-relaxed
+                            [&_strong]:font-semibold [&_strong]:text-gray-900
+                            [&_a]:text-indigo-600 [&_a]:no-underline hover:[&_a]:underline">
+                            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+                        </div>
+                    </section>
 
                     {/* 문의 섹션 */}
-                    <div className="mt-12 p-6 bg-blue-50 border border-blue-200 rounded-lg">
-                        <h3 className="font-bold text-blue-900 mb-2">궁금한 점이 있으신가요?</h3>
-                        <p className="text-sm text-blue-800 mb-4">
+                    <section className="mt-6 p-3 md:p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                        <h3 className="font-semibold text-blue-900 mb-1.5 text-xs md:text-sm">궁금한 점이 있으신가요?</h3>
+                        <p className="text-xs text-blue-800 mb-2.5 leading-relaxed">
                             이 글에 대한 질문이나 정정 요청이 있으시다면 언제든 연락주세요. 
                             더 정확하고 유용한 정보를 제공하기 위해 노력하겠습니다.
                         </p>
                         <Link href="/contact">
-                            <Button variant="default" size="sm" className="bg-blue-600 hover:bg-blue-700">
+                            <Button variant="default" size="sm" className="bg-blue-600 hover:bg-blue-700 text-xs h-7 md:h-8 px-3">
                                 문의하기
                             </Button>
                         </Link>
-                    </div>
+                    </section>
 
-                    <div className="border-t border-gray-200 mt-12 pt-8">
-                        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                            <h4 className="font-bold text-gray-900">이 글 공유하기</h4>
+                    <section className="border-t border-gray-200 mt-6 pt-5">
+                        <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
+                            <h4 className="font-semibold text-gray-900 text-sm md:text-base">이 글 공유하기</h4>
                             <div className="flex gap-2">
-                                <Button size="icon" variant="outline" className="rounded-full h-10 w-10 text-blue-600 border-blue-100 bg-blue-50 hover:bg-blue-100"><Twitter className="h-4 w-4" /></Button>
-                                <Button size="icon" variant="outline" className="rounded-full h-10 w-10 text-blue-800 border-blue-100 bg-blue-50 hover:bg-blue-100"><Facebook className="h-4 w-4" /></Button>
-                                <Button size="icon" variant="outline" className="rounded-full h-10 w-10 text-blue-700 border-blue-100 bg-blue-50 hover:bg-blue-100"><Linkedin className="h-4 w-4" /></Button>
-                                <Button size="icon" variant="outline" className="rounded-full h-10 w-10 text-gray-600"><Share2 className="h-4 w-4" /></Button>
+                                <Button size="icon" variant="outline" className="rounded-full h-9 w-9 text-blue-600 border-blue-100 bg-blue-50 hover:bg-blue-100"><Twitter className="h-3.5 w-3.5" /></Button>
+                                <Button size="icon" variant="outline" className="rounded-full h-9 w-9 text-blue-800 border-blue-100 bg-blue-50 hover:bg-blue-100"><Facebook className="h-3.5 w-3.5" /></Button>
+                                <Button size="icon" variant="outline" className="rounded-full h-9 w-9 text-blue-700 border-blue-100 bg-blue-50 hover:bg-blue-100"><Linkedin className="h-3.5 w-3.5" /></Button>
+                                <Button size="icon" variant="outline" className="rounded-full h-9 w-9 text-gray-600"><Share2 className="h-3.5 w-3.5" /></Button>
                             </div>
                         </div>
-                    </div>
+                    </section>
 
-                    {/* Ad Slot after content - 추후 AdSense 승인 후 활성화 */}
-                    {/* <HorizontalAdSlot className="mt-12" /> */}
+                    {/* 
+                        AdSense 승인 후 본문 끝 광고 영역 추가 예정
+                        - HorizontalAdSlot (728x90) 배치
+                        - 위치: 본문 끝, 공유 버튼 위
+                    */}
 
                 </div>
 
                 {/* Desktop Sidebar */}
-                <div className="hidden lg:block w-80 shrink-0 space-y-8 sticky top-24 self-start">
-                    <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-                        <h3 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wider">목차</h3>
-                        <ul className="space-y-3 text-sm text-gray-600">
-                            <li className="pl-2 border-l-2 border-indigo-500 text-indigo-700 font-medium">소개</li>
-                            <li className="pl-2 border-l-2 border-transparent hover:border-gray-300 cursor-pointer">왜 Tailwind인가?</li>
-                            <li className="pl-2 border-l-2 border-transparent hover:border-gray-300 cursor-pointer">설정하기</li>
-                            <li className="pl-2 border-l-2 border-transparent hover:border-gray-300 cursor-pointer">핵심 개념</li>
-                            <li className="pl-2 border-l-2 border-transparent hover:border-gray-300 cursor-pointer">결론</li>
-                        </ul>
-                    </div>
+                <aside className="hidden lg:block w-72 shrink-0 space-y-6 sticky top-20 self-start">
+                    <TableOfContents content={post.content} />
 
-                    {/* AdSense 승인 후 활성화 */}
-                    {/* <AdSlot label="관련 광고" /> */}
+                    {/* 
+                        AdSense 승인 후 사이드바 광고 영역 추가 예정
+                        - AdSlot (300x250) 배치
+                        - 위치: 목차 아래, 인기글 위
+                    */}
 
-                    <div>
-                        <h3 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wider">{category?.name} 인기글</h3>
-                        <div className="space-y-4">
+                    <section>
+                        <h3 className="font-semibold text-gray-900 mb-3 text-xs uppercase tracking-wider">{category?.name} 인기글</h3>
+                        <div className="space-y-3">
                             {relatedPosts.slice(0, 3).map(p => (
                                 <Link key={p.id} href={`/post/${p.id}`}>
                                     <div className="group cursor-pointer">
-                                        <h4 className="text-sm font-medium text-gray-900 group-hover:text-indigo-600 leading-snug mb-1">{p.title}</h4>
+                                        <h4 className="text-xs font-medium text-gray-900 group-hover:text-indigo-600 leading-snug mb-1">{p.title}</h4>
                                         <span className="text-xs text-gray-400">{p.date}</span>
                                     </div>
                                 </Link>
                             ))}
                         </div>
-                    </div>
-                </div>
+                    </section>
+                </aside>
             </div>
 
             {/* Related Posts Section (Bottom) */}
-            <div className="bg-gray-50 py-16 mt-12 border-t border-gray-100">
+            <section className="bg-gray-50 py-8 mt-6 border-t border-gray-100">
                 <div className="container mx-auto px-4 max-w-5xl">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-8">다음 읽을 글</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-5">다음 읽을 글</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
                         {relatedPosts.slice(0, 3).map(post => (
                             <PostCard key={post.id} post={post} />
                         ))}
                     </div>
                 </div>
-            </div>
+            </section>
         </article>
+        </>
     );
 }
