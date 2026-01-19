@@ -65,6 +65,15 @@ export const metadata = {
             'naver-site-verification': '094139038ce6770db27aa5907e4d187026f34334',
         },
     },
+    icons: {
+        icon: [
+            { url: '/favicon.svg', type: 'image/svg+xml' },
+            { url: '/icon.svg', sizes: '192x192', type: 'image/svg+xml' },
+        ],
+        apple: [
+            { url: '/apple-icon.svg', sizes: '180x180', type: 'image/svg+xml' },
+        ],
+    },
 };
 
 export default function RootLayout({
@@ -77,6 +86,17 @@ export default function RootLayout({
             <head>
                 <meta name="naver-site-verification" content="094139038ce6770db27aa5907e4d187026f34334" />
                 <meta name="google-adsense-account" content="ca-pub-1410200096892996" />
+                
+                {/* 파비콘 - 검색엔진 최적화 (구글, 네이버) */}
+                <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+                <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="32x32" />
+                <link rel="icon" href="/icon.svg" type="image/svg+xml" sizes="192x192" />
+                <link rel="apple-touch-icon" href="/apple-icon.svg" sizes="180x180" />
+                <link rel="manifest" href="/site.webmanifest" />
+                <meta name="theme-color" content="#4F46E5" />
+                <meta name="msapplication-TileColor" content="#4F46E5" />
+                <meta name="msapplication-TileImage" content="/icon.svg" />
+                
                 {/* Google AdSense - head에 직접 삽입 (애드센스 요구사항) */}
                 <script
                     async
