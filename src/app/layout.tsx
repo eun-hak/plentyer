@@ -77,15 +77,14 @@ export default function RootLayout({
             <head>
                 <meta name="naver-site-verification" content="094139038ce6770db27aa5907e4d187026f34334" />
                 <meta name="google-adsense-account" content="ca-pub-1410200096892996" />
-            </head>
-            <body className="font-sans antialiased text-gray-900 bg-white" suppressHydrationWarning>
-                {/* Google AdSense - beforeInteractive로 head에 삽입 */}
-                <Script
+                {/* Google AdSense - head에 직접 삽입 (애드센스 요구사항) */}
+                <script
                     async
                     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1410200096892996"
                     crossOrigin="anonymous"
-                    strategy="beforeInteractive"
                 />
+            </head>
+            <body className="font-sans antialiased text-gray-900 bg-white" suppressHydrationWarning>
                 
                 {/* Google Analytics */}
                 <Script
