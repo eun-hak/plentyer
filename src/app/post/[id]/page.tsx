@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             description: post.summary,
             type: 'article',
             publishedTime: post.date,
-            authors: ['Plentyer'],
+            authors: ['플랜티어'],
             tags: [category?.name || post.category],
         },
         twitter: {
@@ -81,12 +81,12 @@ export default async function PostDetailPage({ params }: PageProps) {
         dateModified: post.date,
         author: {
             '@type': 'Organization',
-            name: 'Plentyer',
+            name: '플랜티어',
             url: process.env.NEXT_PUBLIC_SITE_URL || 'https://plentyer.com',
         },
         publisher: {
             '@type': 'Organization',
-            name: 'Plentyer',
+            name: '플랜티어',
             logo: {
                 '@type': 'ImageObject',
                 url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://plentyer.com'}/og-image.png`,

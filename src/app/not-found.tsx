@@ -4,7 +4,7 @@ import { Button } from './components/ui/button';
 import { NotFoundActions } from './components/NotFoundActions';
 
 export const metadata = {
-  title: '페이지를 찾을 수 없습니다 | Plentyer',
+  title: '페이지를 찾을 수 없습니다 | 플랜티어',
   description: '요청하신 페이지를 찾을 수 없습니다.',
 };
 

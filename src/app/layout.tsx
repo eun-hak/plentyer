@@ -9,14 +9,14 @@ import { SuppressHydrationWarning } from './components/SuppressHydrationWarning'
 
 export const metadata = {
     title: {
-        default: 'Plentyer - 게임의 모든 정보',
-        template: '%s | Plentyer',
+        default: '플랜티어 - 게임의 모든 정보',
+        template: '%s | 플랜티어',
     },
-    description: 'Plentyer는 PC, 콘솔, 모바일 게임 리뷰와 공략, e스포츠 분석 등 게이머를 위한 최고의 콘텐츠를 제공합니다.',
-    keywords: ['플렌티어', 'Plentyer', '게임', 'PC게임', '콘솔게임', '모바일게임', 'e스포츠', '게임리뷰', '게임공략', '게임추천'],
-    authors: [{ name: 'Plentyer' }],
-    creator: 'Plentyer',
-    publisher: 'Plentyer',
+    description: '플랜티어는 PC, 콘솔, 모바일 게임 리뷰와 공략, e스포츠 분석 등 게이머를 위한 최고의 콘텐츠를 제공합니다.',
+    keywords: ['플랜티어', 'Plentyer', '게임', 'PC게임', '콘솔게임', '모바일게임', 'e스포츠', '게임리뷰', '게임공략', '게임추천'],
+    authors: [{ name: '플랜티어' }],
+    creator: '플랜티어',
+    publisher: '플랜티어',
     formatDetection: {
         email: false,
         address: false,
@@ -30,21 +30,21 @@ export const metadata = {
         type: 'website',
         locale: 'ko_KR',
         url: '/',
-        siteName: 'Plentyer',
-        title: 'Plentyer - 게임의 모든 정보',
+        siteName: '플랜티어',
+        title: '플랜티어 - 게임의 모든 정보',
         description: 'PC, 콘솔, 모바일 게임 리뷰와 공략, e스포츠 분석 등 게이머를 위한 최고의 콘텐츠를 제공합니다.',
         images: [
             {
                 url: '/og-image.png',
                 width: 1200,
                 height: 630,
-                alt: 'Plentyer',
+                alt: '플랜티어',
             },
         ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Plentyer',
+        title: '플랜티어',
         description: '게임의 모든 정보',
         images: ['/og-image.png'],
     },

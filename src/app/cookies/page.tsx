@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 
 export const metadata = {
-  title: '쿠키 정책 | Plentyer',
-  description: 'Plentyer의 쿠키 정책을 확인하세요.',
+  title: '쿠키 정책 | 플랜티어',
+  description: '플랜티어의 쿠키 정책을 확인하세요.',
 };
 
 export default function CookiesPage() {

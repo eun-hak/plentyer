@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { ChevronRight, Target, Users, BookOpen, Shield } from 'lucide-react';
 
 export const metadata = {
-  title: '사이트 소개 | Plentyer',
-  description: 'Plentyer는 게이머를 위한 신뢰할 수 있는 정보를 제공하는 게임 전문 블로그입니다. 우리의 미션과 콘텐츠 작성 원칙을 알아보세요.',
+  title: '사이트 소개 | 플랜티어',
+  description: '플랜티어는 게이머를 위한 신뢰할 수 있는 정보를 제공하는 게임 전문 블로그입니다. 우리의 미션과 콘텐츠 작성 원칙을 알아보세요.',
   openGraph: {
-    title: '사이트 소개 | Plentyer',
+    title: '사이트 소개 | 플랜티어',
     description: '게이머를 위한 신뢰할 수 있는 게임 정보 플랫폼',
     type: 'website',
   },

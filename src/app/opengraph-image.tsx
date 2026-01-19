@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
 
-export const alt = 'Plentyer';
+export const alt = '플랜티어';
 export const size = {
   width: 1200,
   height: 630,
@@ -58,7 +58,7 @@ export default async function Image() {
                 color: 'white',
               }}
             >
-              Plentyer
+              플랜티어
             </div>
             <div
               style={{
