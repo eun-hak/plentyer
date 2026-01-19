@@ -76,6 +76,7 @@ export default function RootLayout({
         <html lang="ko" suppressHydrationWarning>
             <head>
                 <meta name="naver-site-verification" content="094139038ce6770db27aa5907e4d187026f34334" />
+                <meta name="google-adsense-account" content="ca-pub-1410200096892996" />
             </head>
             <body className="font-sans antialiased text-gray-900 bg-white" suppressHydrationWarning>
                 {/* Google Analytics */}
@@ -91,6 +92,14 @@ export default function RootLayout({
                         gtag('config', 'G-ZCMSKGVQ2M');
                     `}
                 </Script>
+                
+                {/* Google AdSense */}
+                <Script
+                    async
+                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1410200096892996"
+                    crossOrigin="anonymous"
+                    strategy="afterInteractive"
+                />
                 
                 <SuppressHydrationWarning />
                 <Header />
