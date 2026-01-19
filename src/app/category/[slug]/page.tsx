@@ -23,11 +23,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
 
     return {
-        title: `${category.name} - Plentyer`,
+        title: `${category.name} - 플랜티어`,
         description: category.description,
-        keywords: [category.name, category.slug, '블로그', '카테고리', 'Plentyer'],
+        keywords: [category.name, category.slug, '블로그', '카테고리', '플랜티어'],
         openGraph: {
-            title: `${category.name} - Plentyer`,
+            title: `${category.name} - 플랜티어`,
             description: category.description,
             type: 'website',
         },

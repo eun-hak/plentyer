@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12 max-w-5xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="font-bold text-lg mb-4 text-gray-900">Plentyer</h3>
+            <h3 className="font-bold text-lg mb-4 text-gray-900">플랜티어</h3>
             <p className="text-gray-500 text-sm leading-relaxed max-w-xs mb-4">
               풍요로운(Plenty) 지식을 계층(Tier)별로 구조화하여 제공합니다.
               성장하는 당신을 위한 깊이 있는 콘텐츠 플랫폼.
@@ -39,7 +39,7 @@ export function Footer() {
         </div>
         
         <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
-          <p>© 2025 Plentyer.  All rights reserved.</p>
+          <p>© 2025 플랜티어.  All rights reserved.</p>
          
         </div>
       </div>

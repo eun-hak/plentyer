@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 
 export const metadata = {
-  title: '개인정보 처리 방침 | Plentyer',
-  description: 'Plentyer의 개인정보 처리 방침을 확인하세요.',
+  title: '개인정보 처리 방침 | 플랜티어',
+  description: '플랜티어의 개인정보 처리 방침을 확인하세요.',
 };
 
 export default function PrivacyPolicyPage() {

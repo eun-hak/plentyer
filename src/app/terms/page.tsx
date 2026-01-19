@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 
 export const metadata = {
-  title: '이용약관 | Plentyer',
-  description: 'Plentyer의 서비스 이용약관을 확인하세요.',
+  title: '이용약관 | 플랜티어',
+  description: '플랜티어의 서비스 이용약관을 확인하세요.',
 };
 
 export default function TermsPage() {
