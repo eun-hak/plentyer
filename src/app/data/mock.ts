@@ -22,7 +22,7 @@ export interface Post {
 }
 
 export const CATEGORIES: Category[] = [
-  { id: '1', name: '가이드', slug: 'guide', description: '초보자를 위한 게임 시작 가이드와 기본 팁.', count: 9 },
+  { id: '1', name: '가이드', slug: 'guide', description: '초보자를 위한 게임 시작 가이드와 기본 팁.', count: 10 },
   { id: '2', name: '공략', slug: 'strategy', description: '게임 공략, 전략, 고급 팁과 메타 분석.', count: 6 },
   { id: '3', name: '리뷰', slug: 'review', description: '최신 게임부터 클래식까지 심도있는 리뷰.', count: 6 },
 ];
@@ -30,6 +30,18 @@ export const CATEGORIES: Category[] = [
 import { POST_CONTENTS } from './posts-content';
 
 export const POSTS: Post[] = [
+  {
+    id: '22',
+    title: '게임 실력 향상 습관 가이드: 반복의 품질로 성장하는 방법',
+    summary: '플레이 시간이 늘어도 실력이 정체될 때 점검해야 할 행동 습관을 정리한 가이드. 성과 지표 확인, 무의식적 반복 플레이 경고 신호, 효율적인 복기 방법, 실력 향상 루틴 등 당장 바꿀 수 있는 실용적 방법을 제시합니다.',
+    content: POST_CONTENTS['game-improvement-habits-guide'],
+    category: 'guide',
+    date: '2026-01-22',
+    slug: 'game-improvement-habits-guide',
+    views: 2341,
+    tags: ['게임 실력', '습관', '성장', '가이드', '연습법', '실력 향상'],
+    readingTime: 6
+  },
   {
     id: '21',
     title: '게이밍 하드웨어 구매 리뷰: 체감 성능을 기준으로 한 합리적 선택법',
