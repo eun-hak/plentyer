@@ -32,6 +32,18 @@ import { POST_CONTENTS } from './posts-content';
 export const POSTS: Post[] = [
   {
     id: '22',
+    title: '게임 실력에 직접 영향 주는 PC 환경 세팅 가이드: 돈 안 쓰고 체감 올리기',
+    summary: '해상도·주사율, 윈도우 마우스 가속, 인풋렉 줄이는 옵션, 사운드 방향 인식, 네트워크 체크까지. 장비 구매 없이 설정만으로 체감 성능과 조작 안정성을 끌어올리는 초보자용 PC 게임 환경 세팅 가이드.',
+    content: POST_CONTENTS['pc-gaming-settings-guide'],
+    category: 'guide',
+    date: '2026-01-23',
+    slug: 'pc-gaming-settings-guide',
+    views: 0,
+    tags: ['PC세팅', '인풋렉', '주사율', '마우스 설정', '그래픽 옵션', 'FPS', '가이드'],
+    readingTime: 7
+  },
+  {
+    id: '23',
     title: '게임 실력 향상 습관 가이드: 반복의 품질로 성장하는 방법',
     summary: '플레이 시간이 늘어도 실력이 정체될 때 점검해야 할 행동 습관을 정리한 가이드. 성과 지표 확인, 무의식적 반복 플레이 경고 신호, 효율적인 복기 방법, 실력 향상 루틴 등 당장 바꿀 수 있는 실용적 방법을 제시합니다.',
     content: POST_CONTENTS['game-improvement-habits-guide'],
