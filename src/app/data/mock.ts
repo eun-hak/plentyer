@@ -44,6 +44,18 @@ export const POSTS: Post[] = [
   },
   {
     id: '23',
+    title: '게임 실력 향상을 위한 연습 루틴 가이드: 많이 하는 것보다 중요한 구조',
+    summary: '무작정 플레이하는 연습에서 벗어나 워밍업, 핵심 연습, 실전 적용, 복기로 이어지는 게임 연습 루틴을 정리한 가이드. FPS·MOBA·경쟁 게임 전반에 적용 가능한 실력 향상 구조를 제시합니다.',
+    content: POST_CONTENTS['gaming-practice-routine-guide'],
+    category: 'guide',
+    date: '2026-01-24',
+    slug: 'gaming-practice-routine-guide',
+    views: 0,
+    tags: ['연습루틴', '실력향상', '워밍업', '복기', '경쟁게임', '가이드'],
+    readingTime: 7
+  },
+  {
+    id: '24',
     title: '게임 실력 향상 습관 가이드: 반복의 품질로 성장하는 방법',
     summary: '플레이 시간이 늘어도 실력이 정체될 때 점검해야 할 행동 습관을 정리한 가이드. 성과 지표 확인, 무의식적 반복 플레이 경고 신호, 효율적인 복기 방법, 실력 향상 루틴 등 당장 바꿀 수 있는 실용적 방법을 제시합니다.',
     content: POST_CONTENTS['game-improvement-habits-guide'],
