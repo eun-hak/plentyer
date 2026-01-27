@@ -22,7 +22,7 @@ export interface Post {
 }
 
 export const CATEGORIES: Category[] = [
-  { id: '1', name: '가이드', slug: 'guide', description: '초보자를 위한 게임 시작 가이드와 기본 팁.', count: 10 },
+  { id: '1', name: '가이드', slug: 'guide', description: '초보자를 위한 게임 시작 가이드와 기본 팁.', count: 11 },
   { id: '2', name: '공략', slug: 'strategy', description: '게임 공략, 전략, 고급 팁과 메타 분석.', count: 6 },
   { id: '3', name: '리뷰', slug: 'review', description: '최신 게임부터 클래식까지 심도있는 리뷰.', count: 6 },
 ];
@@ -31,15 +31,15 @@ import { POST_CONTENTS } from './posts-content';
 
 export const POSTS: Post[] = [
   {
-    id: '22',
-    title: '게임 실력에 직접 영향 주는 PC 환경 세팅 가이드: 돈 안 쓰고 체감 올리기',
-    summary: '해상도·주사율, 윈도우 마우스 가속, 인풋렉 줄이는 옵션, 사운드 방향 인식, 네트워크 체크까지. 장비 구매 없이 설정만으로 체감 성능과 조작 안정성을 끌어올리는 초보자용 PC 게임 환경 세팅 가이드.',
-    content: POST_CONTENTS['pc-gaming-settings-guide'],
+    id: '24',
+    title: 'FPS 전용 연습 루틴 가이드: 에임보다 중요한 교전 구조 만들기',
+    summary: 'FPS 게임 실력을 안정적으로 끌어올리기 위한 전용 연습 루틴 가이드. 워밍업, 에임 연습 비중, 교전 판단, 포지셔닝, 즉시 복기까지 랭크 승률로 이어지는 실전 중심 구조를 정리합니다.',
+    content: POST_CONTENTS['fps-practice-routine-guide'],
     category: 'guide',
-    date: '2026-01-23',
-    slug: 'pc-gaming-settings-guide',
+    date: '2026-01-25',
+    slug: 'fps-practice-routine-guide',
     views: 0,
-    tags: ['PC세팅', '인풋렉', '주사율', '마우스 설정', '그래픽 옵션', 'FPS', '가이드'],
+    tags: ['FPS', '연습루틴', '에임연습', '교전', '포지셔닝', '랭크', '가이드'],
     readingTime: 7
   },
   {
@@ -55,7 +55,19 @@ export const POSTS: Post[] = [
     readingTime: 7
   },
   {
-    id: '24',
+    id: '22',
+    title: '게임 실력에 직접 영향 주는 PC 환경 세팅 가이드: 돈 안 쓰고 체감 올리기',
+    summary: '해상도·주사율, 윈도우 마우스 가속, 인풋렉 줄이는 옵션, 사운드 방향 인식, 네트워크 체크까지. 장비 구매 없이 설정만으로 체감 성능과 조작 안정성을 끌어올리는 초보자용 PC 게임 환경 세팅 가이드.',
+    content: POST_CONTENTS['pc-gaming-settings-guide'],
+    category: 'guide',
+    date: '2026-01-23',
+    slug: 'pc-gaming-settings-guide',
+    views: 0,
+    tags: ['PC세팅', '인풋렉', '주사율', '마우스 설정', '그래픽 옵션', 'FPS', '가이드'],
+    readingTime: 7
+  },
+  {
+    id: '25',
     title: '게임 실력 향상 습관 가이드: 반복의 품질로 성장하는 방법',
     summary: '플레이 시간이 늘어도 실력이 정체될 때 점검해야 할 행동 습관을 정리한 가이드. 성과 지표 확인, 무의식적 반복 플레이 경고 신호, 효율적인 복기 방법, 실력 향상 루틴 등 당장 바꿀 수 있는 실용적 방법을 제시합니다.',
     content: POST_CONTENTS['game-improvement-habits-guide'],
