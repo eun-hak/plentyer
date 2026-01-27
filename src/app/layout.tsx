@@ -80,6 +80,8 @@ export const metadata = {
       "naver-site-verification": "094139038ce6770db27aa5907e4d187026f34334",
     },
   },
+
+  //
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
