@@ -26,7 +26,7 @@ export const CATEGORIES: Category[] = [
     name: "가이드",
     slug: "guide",
     description: "초보자를 위한 게임 시작 가이드와 기본 팁.",
-    count: 12,
+    count: 13,
   },
   {
     id: "2",
@@ -47,6 +47,19 @@ export const CATEGORIES: Category[] = [
 import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
+  {
+    id: "26",
+    title: "FPS 포지셔닝 실수 TOP 10: 에임이 좋아도 계속 지는 이유",
+    summary:
+      "FPS에서 실력이 늘지 않는 가장 큰 원인 중 하나는 잘못된 포지셔닝이다. 랭크 게임에서 가장 자주 반복되는 포지션 실수 10가지를 정리하고, 바로 고칠 수 있는 기준을 제시한다.",
+    content: POST_CONTENTS["fps-positioning-mistakes-top10"],
+    category: "guide",
+    date: "2026-01-27",
+    slug: "fps-positioning-mistakes-top10",
+    views: 0,
+    tags: ["FPS", "포지셔닝", "교전", "데스", "랭크", "가이드"],
+    readingTime: 7,
+  },
   {
     id: "25",
     title: "FPS 교전에서 죽는 진짜 이유 TOP 7: 에임 말고 먼저 고쳐야 할 것들",
@@ -110,7 +123,7 @@ export const POSTS: Post[] = [
     readingTime: 7,
   },
   {
-    id: "26",
+    id: "27",
     title: "게임 실력 향상 습관 가이드: 반복의 품질로 성장하는 방법",
     summary:
       "플레이 시간이 늘어도 실력이 정체될 때 점검해야 할 행동 습관을 정리한 가이드. 성과 지표 확인, 무의식적 반복 플레이 경고 신호, 효율적인 복기 방법, 실력 향상 루틴 등 당장 바꿀 수 있는 실용적 방법을 제시합니다.",
