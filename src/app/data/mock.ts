@@ -26,7 +26,7 @@ export const CATEGORIES: Category[] = [
     name: "가이드",
     slug: "guide",
     description: "초보자를 위한 게임 시작 가이드와 기본 팁.",
-    count: 13,
+    count: 14,
   },
   {
     id: "2",
@@ -47,6 +47,19 @@ export const CATEGORIES: Category[] = [
 import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
+  {
+    id: "27",
+    title: "FPS 티어별 교전 기준 정리: 왜 나는 여기서 막히는가",
+    summary:
+      "FPS에서 티어가 오르지 않는 이유는 에임보다 교전 기준이 현재 티어에 맞지 않기 때문이다. 브론즈부터 다이아까지, 각 구간에서 반드시 달라져야 하는 교전 판단 기준을 정리한다.",
+    content: POST_CONTENTS["fps-tier-engagement-guide"],
+    category: "guide",
+    date: "2026-01-28",
+    slug: "fps-tier-engagement-guide",
+    views: 0,
+    tags: ["FPS", "티어", "교전", "랭크", "실력정체", "가이드"],
+    readingTime: 6,
+  },
   {
     id: "26",
     title: "FPS 포지셔닝 실수 TOP 10: 에임이 좋아도 계속 지는 이유",
@@ -123,7 +136,7 @@ export const POSTS: Post[] = [
     readingTime: 7,
   },
   {
-    id: "27",
+    id: "28",
     title: "게임 실력 향상 습관 가이드: 반복의 품질로 성장하는 방법",
     summary:
       "플레이 시간이 늘어도 실력이 정체될 때 점검해야 할 행동 습관을 정리한 가이드. 성과 지표 확인, 무의식적 반복 플레이 경고 신호, 효율적인 복기 방법, 실력 향상 루틴 등 당장 바꿀 수 있는 실용적 방법을 제시합니다.",
