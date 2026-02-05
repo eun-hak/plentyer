@@ -73,6 +73,7 @@ export const POSTS: Post[] = [
     tags: ["FPS", "티어", "교전", "랭크", "실력정체", "가이드"],
     readingTime: 6,
   },
+  //
   {
     id: "26",
     title: "FPS 포지셔닝 실수 TOP 10: 에임이 좋아도 계속 지는 이유",
