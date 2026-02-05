@@ -26,7 +26,7 @@ export const CATEGORIES: Category[] = [
     name: "가이드",
     slug: "guide",
     description: "초보자를 위한 게임 시작 가이드와 기본 팁.",
-    count: 14,
+    count: 15,
   },
   {
     id: "2",
@@ -47,6 +47,19 @@ export const CATEGORIES: Category[] = [
 import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
+  {
+    id: "28",
+    title: "FPS 감도, 언제 바꾸고 언제 절대 고정해야 하나",
+    summary:
+      "FPS에서 감도를 계속 바꾸게 되는 진짜 이유와, 바꿔야 할 때와 절대 고정해야 할 시점을 구분하는 기준을 정리한다. 감도에 흔들리는 플레이어를 위한 현실적인 조언.",
+    content: POST_CONTENTS["fps-sensitivity-guide"],
+    category: "guide",
+    date: "2026-01-29",
+    slug: "fps-sensitivity-guide",
+    views: 0,
+    tags: ["FPS", "감도", "에임", "연습", "멘탈", "가이드"],
+    readingTime: 6,
+  },
   {
     id: "27",
     title: "FPS 티어별 교전 기준 정리: 왜 나는 여기서 막히는가",
@@ -136,7 +149,7 @@ export const POSTS: Post[] = [
     readingTime: 7,
   },
   {
-    id: "28",
+    id: "29",
     title: "게임 실력 향상 습관 가이드: 반복의 품질로 성장하는 방법",
     summary:
       "플레이 시간이 늘어도 실력이 정체될 때 점검해야 할 행동 습관을 정리한 가이드. 성과 지표 확인, 무의식적 반복 플레이 경고 신호, 효율적인 복기 방법, 실력 향상 루틴 등 당장 바꿀 수 있는 실용적 방법을 제시합니다.",
