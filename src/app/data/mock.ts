@@ -26,7 +26,7 @@ export const CATEGORIES: Category[] = [
     name: "가이드",
     slug: "guide",
     description: "초보자를 위한 게임 시작 가이드와 기본 팁.",
-    count: 16,
+    count: 17,
   },
   {
     id: "2",
@@ -47,6 +47,19 @@ export const CATEGORIES: Category[] = [
 import { POST_CONTENTS } from "./posts-content";
 
 export const POSTS: Post[] = [
+  {
+    id: "30",
+    title: "FPS 교전 직전 긴장 때문에 먼저 죽는 사람의 습관 교정법",
+    summary:
+      "교전이 열리기 직전 손이 굳고 시야가 좁아지면서 먼저 죽는 패턴은 대부분 '에임'이 아니라 습관에서 나온다. 긴장 상태에서 무너지는 체크 포인트와, 교전을 안정화시키는 실제 루틴을 정리한다.",
+    content: POST_CONTENTS["fps-fight-anxiety-habit-fix"],
+    category: "guide",
+    date: "2026-01-31",
+    slug: "fps-fight-anxiety-habit-fix",
+    views: 0,
+    tags: ["FPS", "멘탈", "긴장", "교전", "습관", "가이드"],
+    readingTime: 6,
+  },
   {
     id: "29",
     title: "FPS 연패 구간에서 멘탈이 무너지는 이유와 빠져나오는 방법",
@@ -163,7 +176,7 @@ export const POSTS: Post[] = [
     readingTime: 7,
   },
   {
-    id: "30",
+    id: "31",
     title: "게임 실력 향상 습관 가이드: 반복의 품질로 성장하는 방법",
     summary:
       "플레이 시간이 늘어도 실력이 정체될 때 점검해야 할 행동 습관을 정리한 가이드. 성과 지표 확인, 무의식적 반복 플레이 경고 신호, 효율적인 복기 방법, 실력 향상 루틴 등 당장 바꿀 수 있는 실용적 방법을 제시합니다.",
