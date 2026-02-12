@@ -1,12 +1,3 @@
-# Plentyer - 게임 정보 블로그
-
-**Google AdSense 승인 최적화** 게임 전문 블로그 웹사이트
-
-## 프로젝트 소개
-
-Plentyer는 게이머를 위한 신뢰할 수 있는 정보를 제공하는 게임 전문 블로그입니다.  
-PC 게임, 콘솔 게임, 모바일 게임, e스포츠 등 다양한 게임 콘텐츠를 제공합니다.
-
 ## 기술 스택
 
 - **Framework**: Next.js 16.1.1 (App Router)
@@ -18,17 +9,21 @@ PC 게임, 콘솔 게임, 모바일 게임, e스포츠 등 다양한 게임 콘�
 ## 설치 및 실행
 
 ### 1. 의존성 설치
+
 ```bash
 npm install
 ```
 
 ### 2. 환경 변수 설정
+
 `.env.local` 파일을 생성하고 다음 내용을 추가하세요:
+
 ```
 NEXT_PUBLIC_SITE_URL=https://yourdomain.com
 ```
 
 ### 3. 개발 서버 실행
+
 ```bash
 npm run dev
 ```
@@ -36,6 +31,7 @@ npm run dev
 브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어 확인하세요.
 
 ### 4. 프로덕션 빌드
+
 ```bash
 npm run build
 npm start
@@ -44,6 +40,7 @@ npm start
 ## 주요 기능
 
 ### ✅ 완성된 기능
+
 - [x] 12개 고품질 게시글 (각 900-1400자 분량)
 - [x] 필수 정책 페이지 (About, Contact, Privacy Policy, Terms of Service)
 - [x] 완전한 네비게이션 (Header/Footer)
@@ -75,6 +72,7 @@ npm start
 ### 📋 필수 요구사항
 
 #### 1. 콘텐츠 품질 ✅
+
 - [x] 최소 12개 이상의 고품질 게시글
 - [x] 각 게시글 900-1400자 분량
 - [x] 독창적인 콘텐츠 (복사/표절 없음)
@@ -82,18 +80,21 @@ npm start
 - [x] 자연스러운 한국어 작성
 
 #### 2. 필수 페이지 ✅
+
 - [x] **사이트 소개 (About)**: 운영 목적, 콘텐츠 작성 원칙
 - [x] **문의하기 (Contact)**: 이메일 폼, 연락 수단
 - [x] **개인정보처리방침 (Privacy)**: 쿠키, AdSense, 제3자 광고, 권리, 문의처
 - [x] **이용약관 (Terms)**: 서비스 범위, 면책, 저작권, 금지행위, 분쟁 해결
 
 #### 3. 네비게이션 ✅
+
 - [x] 모든 페이지에서 접근 가능한 상단 메뉴
 - [x] 푸터에 필수 페이지 링크
 - [x] 명확한 카테고리 구조
 - [x] Breadcrumb 네비게이션
 
 #### 4. SEO 및 인덱싱 ✅
+
 - [x] **robots.txt**: 모든 주요 페이지 인덱싱 허용
 - [x] **sitemap.xml**: 전체 페이지 URL 포함
 - [x] **메타 태그**: title, description, canonical
@@ -102,6 +103,7 @@ npm start
 - [x] noindex/차단 메타 없음
 
 #### 5. 사용자 경험 ✅
+
 - [x] 모바일 반응형 디자인
 - [x] 빠른 로딩 속도
 - [x] 명확한 타이포그래피
@@ -109,6 +111,7 @@ npm start
 - [x] 404 페이지 및 에러 처리
 
 #### 6. 기술 요구사항 ✅
+
 - [x] HTTPS 사용 (배포 시)
 - [x] 유효한 도메인
 - [x] 18세 이상 운영자
@@ -117,6 +120,7 @@ npm start
 ### ⚠️ 금지 사항
 
 다음 사항을 반드시 피하세요:
+
 - ❌ 타 사이트 콘텐츠 복사
 - ❌ 의미 없는 키워드 나열
 - ❌ 성인/도박/불법 콘텐츠
@@ -127,6 +131,7 @@ npm start
 ### 🚀 배포 전 최종 점검
 
 #### 배포 직전
+
 1. [ ] 도메인 연결 및 HTTPS 설정
 2. [ ] `.env.local`에 실제 도메인 URL 설정
 3. [ ] Contact 페이지의 이메일 주소를 실제 주소로 변경
@@ -136,6 +141,7 @@ npm start
 7. [ ] Google Search Console 등록
 
 #### AdSense 신청
+
 1. [ ] 사이트가 최소 6개월 이상 운영되었는지 확인 (권장)
 2. [ ] 주간 2-3개 이상 새 글 게시 (꾸준한 업데이트)
 3. [ ] 일일 방문자 100명 이상 (권장)
@@ -144,6 +150,7 @@ npm start
 6. [ ] 승인 대기 (일반적으로 1-4주)
 
 #### 승인 후
+
 1. [ ] AdSense 광고 코드 삽입
 2. [ ] `ads.txt` 파일 생성 및 배포
 3. [ ] 광고 배치 최적화
@@ -152,13 +159,16 @@ npm start
 ## 개발 가이드
 
 ### 새 게시글 추가
+
 `src/app/data/posts-content.ts` 파일에 콘텐츠를 추가하고  
 `src/app/data/mock.ts`의 `POSTS` 배열에 메타데이터를 추가하세요.
 
 ### 카테고리 추가
+
 `src/app/data/mock.ts`의 `CATEGORIES` 배열에 새 카테고리를 추가하세요.
 
 ### 스타일 커스터마이징
+
 - `src/styles/`: 전역 CSS 파일
 - `tailwind.config.ts`: Tailwind 설정
 - `src/app/components/ui/`: UI 컴포넌트
@@ -187,7 +197,3 @@ This project is private and proprietary.
 - 웹사이트: https://plentyer.com
 
 ---
-
-**참고**: 이 프로젝트는 Google AdSense 정책을 준수하도록 설계되었습니다.  
-실제 배포 전 [AdSense 프로그램 정책](https://support.google.com/adsense/answer/48182)을 반드시 확인하세요.
-  
