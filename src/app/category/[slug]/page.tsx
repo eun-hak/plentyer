@@ -7,7 +7,7 @@ import { Button } from "../../components/ui/button";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-
+//
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
