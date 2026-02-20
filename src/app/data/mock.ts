@@ -22,7 +22,7 @@ export interface Post {
 }
 
 export const CATEGORIES: Category[] = [
-  { id: '1', name: '가이드', slug: 'guide', description: '초보자를 위한 게임 시작 가이드와 기본 팁.', count: 9 },
+  { id: '1', name: '가이드', slug: 'guide', description: '초보자를 위한 게임 시작 가이드와 기본 팁.', count: 10 },
   { id: '2', name: '공략', slug: 'strategy', description: '게임 공략, 전략, 고급 팁과 메타 분석.', count: 7 },
   { id: '3', name: '리뷰', slug: 'review', description: '최신 게임부터 클래식까지 심도있는 리뷰.', count: 6 },
 ];
@@ -30,6 +30,18 @@ export const CATEGORIES: Category[] = [
 import { POST_CONTENTS } from './posts-content';
 
 export const POSTS: Post[] = [
+  {
+    id: '32',
+    title: 'FPS에서 잘하는 사람처럼 보이는 플레이의 정체',
+    summary: '킬이 많지 않아도 팀에서 믿음이 가는 사람은 무엇이 다를까. FPS에서 실력자처럼 보이게 만드는 행동과, 대부분이 착각하는 포인트를 사람의 시선에서 풀어낸다.',
+    content: POST_CONTENTS['fps-look-good-player-truth'],
+    category: 'guide',
+    date: '2026-02-02',
+    slug: 'fps-look-good-player-truth',
+    views: 0,
+    tags: ['FPS', '플레이스타일', '멘탈', '교전', '랭크'],
+    readingTime: 6
+  },
   {
     id: '31',
     title: 'FPS 연패 구간 탈출법: 멘탈이 무너질 때 실력이 망가지는 순서부터 끊자',
