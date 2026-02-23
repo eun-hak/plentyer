@@ -22,7 +22,7 @@ export interface Post {
 }
 
 export const CATEGORIES: Category[] = [
-  { id: '1', name: '가이드', slug: 'guide', description: '초보자를 위한 게임 시작 가이드와 기본 팁.', count: 10 },
+  { id: '1', name: '가이드', slug: 'guide', description: '초보자를 위한 게임 시작 가이드와 기본 팁.', count: 11 },
   { id: '2', name: '공략', slug: 'strategy', description: '게임 공략, 전략, 고급 팁과 메타 분석.', count: 7 },
   { id: '3', name: '리뷰', slug: 'review', description: '최신 게임부터 클래식까지 심도있는 리뷰.', count: 6 },
 ];
@@ -30,6 +30,18 @@ export const CATEGORIES: Category[] = [
 import { POST_CONTENTS } from './posts-content';
 
 export const POSTS: Post[] = [
+  {
+    id: '33',
+    title: 'FPS 실력이 정체될 때 절대 하면 안 되는 행동들',
+    summary: '연습은 계속하는데 실력이 늘지 않는 구간에는 공통적인 행동 패턴이 있다. 정체를 길게 만드는 대표적인 습관과, 그 습관이 왜 성장을 막는지 사람의 플레이 흐름 기준으로 정리한다.',
+    content: POST_CONTENTS['fps-skill-plateau-mistakes'],
+    category: 'guide',
+    date: '2026-02-03',
+    slug: 'fps-skill-plateau-mistakes',
+    views: 0,
+    tags: ['FPS', '정체기', '실력향상', '습관', '멘탈'],
+    readingTime: 6
+  },
   {
     id: '32',
     title: 'FPS에서 잘하는 사람처럼 보이는 플레이의 정체',
