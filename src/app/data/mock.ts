@@ -22,7 +22,7 @@ export interface Post {
 }
 
 export const CATEGORIES: Category[] = [
-  { id: '1', name: '가이드', slug: 'guide', description: '초보자를 위한 게임 시작 가이드와 기본 팁.', count: 11 },
+  { id: '1', name: '가이드', slug: 'guide', description: '초보자를 위한 게임 시작 가이드와 기본 팁.', count: 12 },
   { id: '2', name: '공략', slug: 'strategy', description: '게임 공략, 전략, 고급 팁과 메타 분석.', count: 7 },
   { id: '3', name: '리뷰', slug: 'review', description: '최신 게임부터 클래식까지 심도있는 리뷰.', count: 6 },
 ];
@@ -30,6 +30,18 @@ export const CATEGORIES: Category[] = [
 import { POST_CONTENTS } from './posts-content';
 
 export const POSTS: Post[] = [
+  {
+    id: '34',
+    title: 'FPS를 오래 해도 늘지 않는 사람들의 공통 습관',
+    summary: 'FPS를 몇 년을 해도 실력이 그대로인 사람들에게는 반복되는 습관이 있다. 에임이나 재능이 아니라, 플레이를 대하는 방식에서 성장을 막는 패턴을 정리한다.',
+    content: POST_CONTENTS['fps-no-growth-common-habits'],
+    category: 'guide',
+    date: '2026-02-04',
+    slug: 'fps-no-growth-common-habits',
+    views: 0,
+    tags: ['FPS', '정체', '습관', '멘탈', '성장'],
+    readingTime: 6
+  },
   {
     id: '33',
     title: 'FPS 실력이 정체될 때 절대 하면 안 되는 행동들',
