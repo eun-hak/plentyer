@@ -22,7 +22,7 @@ export interface Post {
 }
 
 export const CATEGORIES: Category[] = [
-  { id: '1', name: '가이드', slug: 'guide', description: '초보자를 위한 게임 시작 가이드와 기본 팁.', count: 12 },
+  { id: '1', name: '가이드', slug: 'guide', description: '초보자를 위한 게임 시작 가이드와 기본 팁.', count: 13 },
   { id: '2', name: '공략', slug: 'strategy', description: '게임 공략, 전략, 고급 팁과 메타 분석.', count: 7 },
   { id: '3', name: '리뷰', slug: 'review', description: '최신 게임부터 클래식까지 심도있는 리뷰.', count: 6 },
 ];
@@ -30,6 +30,18 @@ export const CATEGORIES: Category[] = [
 import { POST_CONTENTS } from './posts-content';
 
 export const POSTS: Post[] = [
+  {
+    id: '35',
+    title: 'FPS에서 실력 차이가 벌어지는 진짜 이유: 판단 속도의 정체',
+    summary: '에임이 비슷한데 왜 교전 결과는 다를까. FPS에서 실력 차이를 만드는 핵심은 반응 속도가 아니라 판단 속도다. 고수들이 빠른 이유와, 그 속도를 만드는 구조를 정리한다.',
+    content: POST_CONTENTS['fps-decision-speed-truth'],
+    category: 'guide',
+    date: '2026-02-05',
+    slug: 'fps-decision-speed-truth',
+    views: 0,
+    tags: ['FPS', '판단', '교전', '실력차이', '랭크'],
+    readingTime: 6
+  },
   {
     id: '34',
     title: 'FPS를 오래 해도 늘지 않는 사람들의 공통 습관',
